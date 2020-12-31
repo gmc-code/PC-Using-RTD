@@ -53,9 +53,8 @@ html_theme_options = {
     'display_version': False,  # False so doc version not shown
     'prev_next_buttons_location': 'both',  # Can be bottom, top, both , or None
     'style_external_links': True,  # True to Add an icon next to external links
-    # 'style_nav_header_background':
-    # 'linear-gradient(to right, #9900cc 0%, #009933 50%, #0033cc 100%)',
-    'style_nav_header_background': 'LightGreen',  # blue
+    # 'style_nav_header_background': 'blue',
+    'style_nav_header_background': 'linear-gradient(to right, #9900cc 0%, #009933 50%, #0033cc 100%)',
     # Toc options
     'collapse_navigation': False,  # False so nav entries have the [+] icons
     'sticky_navigation': False,  # False so the nav does not scroll
