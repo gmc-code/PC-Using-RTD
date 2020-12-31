@@ -10,7 +10,8 @@ import sphinx_rtd_theme
 project = 'PC-Using-RTD'
 copyright = '2020-1, GMC'
 author = 'GMC'
-
+version = '1'
+release = '1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -30,12 +31,26 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+# The suffix of source filenames.
+source_suffix = '.rst'
+
+# The encoding of source files.
+# source_encoding = 'utf-8-sig'
+
+# The master toctree document.
+master_doc = 'index'
+
 
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.
 # See the documentation for a list of builtin themes.
 html_theme = 'sphinx_rtd_theme'
+
+# The name for this set of Sphinx documents.  If None, it defaults to
+# "<project> v<release> documentation".
+# html_title = None
+html_title = "PC-Using-RTD"
 
 # Use custom css
 html_css_files = ['css/custom.css']
@@ -47,10 +62,10 @@ html_static_path = ['_static']
 
 # -- sphinx-rtd-theme Theme Options ------------------------------------------
 # See: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
-  
+
 html_theme_options = {
     'logo_only': False,  # False so text is shown
-    'display_version': False,  # False so doc version not shown
+    'display_version': True,  # False so doc version not shown
     'prev_next_buttons_location': 'both',  # Can be bottom, top, both , or None
     'style_external_links': True,  # True to Add an icon next to external links
     # 'style_nav_header_background': 'blue',
