@@ -67,8 +67,7 @@ html_theme_options = {
     'prev_next_buttons_location': 'both',  # Can be bottom, top, both , or None
     'style_external_links': True,  # True to Add an icon next to external links
     # 'style_nav_header_background': 'blue',
-    # 'style_nav_header_background': 'linear-gradient(to right, #9900cc 0%, #009933 50%, #0033cc 100%)',
-    'style_nav_header_background': 'linear-gradient(to right, purple 0%, forestgreen 30%, green 50%, forestgreen 70%, blue 100%)',
+    'style_nav_header_background': 'linear-gradient(to right, blueviolet 15%, limegreen 50%, royalblue 80%)',
     # Toc options
     'collapse_navigation': False,  # False so nav entries have the [+] icons
     'sticky_navigation': False,  # False so the nav does not scroll
@@ -79,7 +78,7 @@ html_theme_options = {
 
 # -- RTDs logos -------------------------------------------------
 html_favicon = "_static/favicon.ico"
-html_logo = "_static/logo.png"
+html_logo = "_static/logo_50.png"
 
 # -- Other Options -------------------------------------------------
 # easiest way to add substitutions to each file
