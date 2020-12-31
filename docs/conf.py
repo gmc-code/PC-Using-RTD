@@ -65,7 +65,7 @@ html_theme_options = {
 
 # -- RTDs logos -------------------------------------------------
 html_favicon = "_static/favicon.ico"
-html_logo = "_static/logo_100.png"
+html_logo = "_static/logo.png"
 
 # -- Other Options -------------------------------------------------
 # easiest way to add substitutions to each file
