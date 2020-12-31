@@ -64,3 +64,5 @@ custom logo
 * Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom favicon in the ``_static/favicon.ico`` file. ::
 
     html_favicon = "_static/favicon.ico"
+
+    

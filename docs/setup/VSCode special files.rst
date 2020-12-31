@@ -108,7 +108,7 @@ custom css
 custom logos
 ----------------------
 
-* Add a ``logo.png`` file to the ``_static`` folder, with width <= 200 pixels.
+* Add a ``logo.png`` file to the ``_static`` folder, with width <= 200 pixels. To save room, use a height <=50 pixels.>
 
 * As per :ref:`custom logo`; add the code below to the ``Options for HTML output`` section of ``conf.py`` file to use the custom logo. ::
 
