@@ -60,7 +60,6 @@ html_static_path = ['_static']
 
 # -- sphinx-rtd-theme Theme Options ------------------------------------------
 # See: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
-
 html_theme_options = {
     'logo_only': False,  # False so text is shown
     'display_version': False,  # False so doc version not shown
