@@ -57,7 +57,10 @@ custom css
 
 custom logo
 ----------------------
-* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom logo in the ``logos/logo.png`` file. ::
+* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom logo in the ``_static/logo.png`` file. ::
 
-    html_logo = 'logos/logo.png'
+    html_logo = '_static/logo.png'
 
+* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom favicon in the ``_static/favicon.ico`` file. ::
+
+    html_favicon = "_static/favicon.ico"

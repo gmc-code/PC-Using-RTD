@@ -55,7 +55,7 @@ html_theme_options = {
     'style_external_links': True,  # True to Add an icon next to external links
     # 'style_nav_header_background':
     # 'linear-gradient(to right, #9900cc 0%, #009933 50%, #0033cc 100%)',
-    'style_nav_header_background': 'Lavender',  # blue
+    'style_nav_header_background': 'LightGreen',  # blue
     # Toc options
     'collapse_navigation': False,  # False so nav entries have the [+] icons
     'sticky_navigation': False,  # False so the nav does not scroll
@@ -65,8 +65,8 @@ html_theme_options = {
 }
 
 # -- RTDs logos -------------------------------------------------
-# html_favicon = "_static/favicon.ico"
-html_logo = "_static/mb_logo.png"
+html_favicon = "_static/favicon.ico"
+html_logo = "_static/logo.png"
 
 # -- Other Options -------------------------------------------------
 # easiest way to add substitutions to each file

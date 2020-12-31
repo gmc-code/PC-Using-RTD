@@ -108,16 +108,17 @@ custom css
 custom logos
 ----------------------
 
-* Add a folder ``logos`` to the ``docs`` folder. ::
-
-    mkdir logos
-
-* Add a ``logo.png`` file to the ``logos`` folder, with width < 200 pixels.
+* Add a ``logo.png`` file to the ``_static`` folder, with width <= 200 pixels.
 
 * As per :ref:`custom logo`; add the code below to the ``Options for HTML output`` section of ``conf.py`` file to use the custom logo. ::
 
-    html_logo = 'logos/logo.png'
+    html_logo = '_static/logo.png'
 
+* Add a ``favicon.ico`` file to the ``_static`` folder, with size 32 x 32 pixels.
+
+* As per :ref:`custom logo`; add the code below to the ``Options for HTML output`` section of ``conf.py`` file to use the custom logo. ::
+
+    html_favicon = "_static/favicon.ico"
 
 * See https://www.sphinx-doc.org/en/master/usage/configuration.html
 
