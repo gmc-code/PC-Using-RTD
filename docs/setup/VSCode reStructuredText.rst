@@ -66,6 +66,7 @@ Sample code
     for y in range(0, 5):
         display.set_pixel(x, y, 9)
 
+
 View docs as html
 --------------------
 There are a few different ways to view how the documentation will look before pushing it to GitHub and viewing it in RTDs.
@@ -115,3 +116,4 @@ View docs as html using localhost
 * The html can also be viewed in the browser using the the VSCode terminal. ::
     
     start chrome http://localhost:8000/_build/html/
+
