@@ -8,24 +8,24 @@ Add files
 ---------------
 #. Add the ``.gitignore`` file using the VSCode terminal. Run from within the **project** folder. ::
 
-    ni .gitignore
+    type nul > .gitignore
 
 
 #. Add the three files using the VSCode terminal. Run from within the **docs** folder. ::
 
-    ni requirements.txt
-    ni .readthedocs.yml
-    ni .gitignore
+    type nul > requirements.txt
+    type nul > .readthedocs.yml
+    type nul > .gitignore
     
 #. Add the ``_templates/breadcrumbs.html`` file using the VSCode terminal. Run from within the **docs** folder. ::
 
-    ni _templates/breadcrumbs.html
+    type nul > _templates/breadcrumbs.html
 
 
 .. tip::
-   Adding files from the terminal can also be done using the following:
-   ``type nul > filename`` can be used instead of ``ni filename``
-   e.g. type nul >  requirements.txt 
+   If using windows powershell as the terminal, adding files from the terminal can be done using the following:
+   ``ni filename``
+   e.g. ni requirements.txt 
 
 
 
@@ -33,7 +33,7 @@ docs/requirements.txt
 ---------------------------
 * Use a requirements file ``docs/requirements.txt`` to specify the version of Sphinx.
 * See: https://docs.readthedocs.io/en/stable/guides/specifying-dependencies.html
-* Use this text in the requirements file with the version numbers you are using::
+* Use this text in the requirements file with the version numbers you are using: ::
 
     sphinx==3.4.1
     sphinx_rtd_theme==0.5.0
@@ -57,7 +57,7 @@ docs/.readthedocs.yml
 docs/.gitignore
 ------------------------
 * Use a ``docs/.gitignore`` file so that the build folder is ignored when pushing the docs to the github repo.
-* Set the contents of the file ``.gitignore``::
+* Set the contents of the file ``.gitignore``: ::
 
     _build
 
@@ -66,7 +66,7 @@ docs/.gitignore
 ----------------
 * To prevent the .vscode folder from being pushed to GitHub, use a ``.gitignore`` file in the project folder.
 * To release any .vscode files that may have been previously cached by git use in the VSCode terminal: ``git rm -r --cached .vscode``.
-* Set the contents of the file ``.gitignore``::
+* Set the contents of the file ``.gitignore``: ::
 
     **/.vscode
 
