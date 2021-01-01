@@ -94,7 +94,7 @@ custom css
 
 * Add a ``custom css`` file containing any css that will override the theme css.
 
-    ni _static/css/custom.css
+    type nul > _static/css/custom.css
 
 * As per :ref:`custom css`; add the code below to the ``Options for HTML output`` section of ``conf.py`` file to use the custom css. ::
 
