@@ -22,4 +22,4 @@ From the cmd prompt, confirm your settings with: ::
 
     git config --list
 
-    
+

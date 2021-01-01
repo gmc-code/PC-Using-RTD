@@ -55,6 +55,7 @@ Sample code
         for y in range(0, 5):
             display.set_pixel(x, y, 9)
 
+
 * This displays as:
 
 .. code-block:: python
@@ -65,6 +66,7 @@ Sample code
     x = 0
     for y in range(0, 5):
         display.set_pixel(x, y, 9)
+
 
 
 View docs as html

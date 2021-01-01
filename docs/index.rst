@@ -34,6 +34,13 @@ VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
    setup/Read the docs (RTD).rst
    setup/Push VSCode changes to GitHub.rst
 
+.. toctree::
+   :maxdepth: 3
+   :caption: More on Git:
+   :numbered:
+
+   setup/Git commands.rst
+
 
 An alternate approach can be followed in the techwritingmatters tutorial which has 4 youtube videos.
 https://techwritingmatters.com/documenting-with-sphinx-tutorial-intro-overview#Structure_of_the_Tutorial
