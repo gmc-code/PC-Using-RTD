@@ -3,7 +3,6 @@
 VSCode special files
 ====================================
 
-
 Add files
 ---------------
 #. Add the ``.gitignore`` file using the VSCode terminal. Run from within the **project** folder. ::
