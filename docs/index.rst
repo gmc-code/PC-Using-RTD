@@ -1,13 +1,14 @@
 .. PC-Using-RTD documentation master file, created by sphinx-quickstart, 2020.
    It should at least contain the root `toctree` directive.
 
+==============================
 PC-Using-RTD 
-=================
+==============================
 
 These docs provide a simple instruction list for setting up automatic updating of your project documentation hosted at ReadTheDocs.
 
 Overall Process
-=================
+==============================
 VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
 
 #. In VSCode, create plain text source files in reStructuredText (.rst) format.

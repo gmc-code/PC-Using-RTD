@@ -1,10 +1,11 @@
 .. _VSCode special files:
 
+==============================
 VSCode special files
-====================================
+==============================
 
 Add files
----------------
+==============================
 #. Add the ``.gitignore`` file using the VSCode terminal. Run from within the **project** folder. ::
 
     type nul > .gitignore
@@ -29,7 +30,7 @@ Add files
 
 
 docs/requirements.txt
----------------------------
+==============================
 * Use a requirements file ``docs/requirements.txt`` to specify the version of Sphinx.
 * See: https://docs.readthedocs.io/en/stable/guides/specifying-dependencies.html
 * Use this text in the requirements file with the version numbers you are using: ::
@@ -48,13 +49,13 @@ docs/requirements.txt
 
 
 docs/.readthedocs.yml
-----------------------------
+==============================
 * Use a config file ``docs/.readthedocs.yml`` so that the requirements file can be used.
 * Get the file contents from the main example at: https://docs.readthedocs.io/en/stable/config-file/v2.html
 
 
 docs/.gitignore
-------------------------
+==============================
 * Use a ``docs/.gitignore`` file so that the build folder is ignored when pushing the docs to the github repo.
 * Set the contents of the file ``.gitignore``: ::
 
@@ -62,7 +63,7 @@ docs/.gitignore
 
 
 .gitignore
-----------------
+==============================
 * To prevent the .vscode folder from being pushed to GitHub, use a ``.gitignore`` file in the project folder.
 * To release any .vscode files that may have been previously cached by git use in the VSCode terminal: ``git rm -r --cached .vscode``.
 * Set the contents of the file ``.gitignore``: ::
@@ -73,7 +74,7 @@ docs/.gitignore
 
 
 breadcrumbs.html
-------------------------------------------
+==============================
 * Use a ``docs/_templates/breadcrumbs.html`` to remove the top right ``Edit on GitHub`` button in RTDs that links to the github repo.
 * Set the contents of the file ``breadcrumbs.html``::
 
@@ -85,8 +86,8 @@ breadcrumbs.html
 * See https://docs.readthedocs.io/en/latest/guides/remove-edit-buttons.html
 
 
-custom css
-----------------------
+Custom css
+==============================
 * Add a folder ``css`` to the ``_static`` folder. ::
 
     mkdir _static/css
@@ -104,8 +105,8 @@ custom css
 * See more details at: https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html
 
 
-custom logos
-----------------------
+Custom logos
+==============================
 
 * Add a ``logo.png`` file to the ``_static`` folder, with width <= 200 pixels. To save room, use a height <=50 pixels.>
 

@@ -1,8 +1,15 @@
 .. _GitHub new repo:
 
+==============================
 GitHub and VSCode
 ==============================
 * Create a fee account at github if you don't already have one.
+
+----
+
+VSCode starting from **creating a new empty repository**
+============================================================
+
 * Create new repo at github: https://github.com/ or at https://github.com/mygithubname?tab=repositories. 
 * Name the new repo the same name as the project folder. 
 * See :ref:`VSCode Project Folder and Sphinx`
@@ -85,14 +92,23 @@ VSCode Git staging and commits
 * ``D`` stands for delete as a result of a name change to a file.
 
 Changes and Staged Changes
-+++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Click a file to see the ``git diff`` visualization in split columns, showing changes since the last commit.
 * Click the clipboard icon to open the file in VSCode
 * Click the left loop arrow icon to discard changes to the file since the last commit.
 * Click the plus icon add the file to teh stage area. It will be listed under **Staged Changes**.
 
 Commits
-++++++++++
+~~~~~~~~~~~
 * Type in specific details as the message in the Source Control section.
 * Click the ``tick icon`` to commit changes
-* If there are no stage
+* If there are no staged files (Only Changes is shown), then all files are staged and committed.
+* If there are some files that have been staged (Staged Changes is shown), then only the staged files will be committed.
+
+
+----
+
+VSCode starting from **Cloning a repository**
+============================================================
+
+https://www.youtube.com/watch?v=sz2EM-gkEs0&list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi&index=2
