@@ -25,7 +25,7 @@ The main features are:
 For an introduction to command line use of git in the terminal (CLI) see: https://www.youtube.com/watch?v=HVsySz-h9r4&list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx
 
 Below are some git CLI commands that might be useful.
-
+For the book that was the basis of teh videos, see: https://git-scm.com/book/en/v2
 
 Install Git
 --------------
