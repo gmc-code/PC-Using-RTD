@@ -63,6 +63,7 @@ VSCode GitHub updates
 * The Source Control Repositories section has icons and dropdowns for key commands.
 * To push the changes to GitHub, click the icon between the branch icon and tick icon that shows the Push message when hovering over it.
 
+
 VSCode GitHub controls
 --------------------------
 * Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`P` to open the Command Palette. 
