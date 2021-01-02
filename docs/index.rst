@@ -7,8 +7,8 @@ PC-Using-RTD
 
 These docs provide a simple instruction list for setting up automatic updating of your project documentation hosted at ReadTheDocs.
 
-Overall Process
-==============================
+**Overall Process**
+
 VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
 
 #. In VSCode, create plain text source files in reStructuredText (.rst) format.
