@@ -1,8 +1,30 @@
 Git Commands
 ============
-See: https://www.youtube.com/watch?v=HVsySz-h9r4&list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx
 
-Below are some git commands that might be useful in other situations.
+For use of git in VSCode see: https://code.visualstudio.com/docs/editor/versioncontrol
+Visual Studio Code has git support built in. You will need to have git version 2.0.0 (or newer)
+installed.
+The main features are:
+
+* See the diff of the file you are editing in the gutter.
+* The Git Status Bar (lower left) shows the current branch, dirty indicators, incoming and outgoing commits.
+* You can do the most common git operations from within the editor:
+
+    * Initialize a repository.
+    * Clone a repository.
+    * Create branches and tags.
+    * Stage and commit changes.
+    * Push/pull/sync with a remote branch.
+    * Resolve merge conflicts.
+    * View diffs.
+* With an extension, you can also handle GitHub Pull Requests: https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github.
+
+
+----
+
+For an introduction to command line use of git in the terminal (CLI) see: https://www.youtube.com/watch?v=HVsySz-h9r4&list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx
+
+Below are some git CLI commands that might be useful.
 
 
 Install Git
@@ -46,7 +68,7 @@ Help formats: ::
 ---------------------------------------------
 To initialize a repository from existing code, first change the command line directory to the project folder: ::
 
-    cd "C:\Users\gmccarthy\microbit for online\PC-using-RTD"
+    cd "C:\repos\PC-using-RTD"
 
 Sometimes you may already be in a subfolder and just need to go up to the parent folder::
 
@@ -94,6 +116,15 @@ To add all files within the **project** folder to the staging area: ::
 To check the status of the git: ::
 
     git status
+
+Options for adding files: 
+git add -A (or --all) does the whole working tree
+git add -A mydir/  does the files in that directory
+git add mydir/  does the files in that directory (-A is the default)
+git add -u (or --update) does only tracked files in the whole working tree (not ignored or new files)
+git add -u mydir/ does only tracked files in that directory (not ignored or new files)
+git add . is the same as git add -A mydir/ depending on the working directory
+
 
 
 Commit files from Staging Area
@@ -304,7 +335,7 @@ Use this after accidentally make commit to master branch instead of feature bran
 
 Copy the hash of the master branch's last commit that needs moving.
 
-Switch to feture branch: ::
+Switch to feature branch: ::
     
     git checkout <featurebranch> 
 
@@ -367,7 +398,7 @@ Get a log of commits in order from last commit: ::
 
     git reflog
 
-Copy a hash and check out that hash and ccheck it using log: ::
+Copy a hash and check out that hash and check it using log: ::
 
     git checkout <hash>
     git log
@@ -386,14 +417,75 @@ View branches to check: ::
 
 Make changes when changes have been pushed
 -----------------------------------------------------
+Create new commits to undo changes.
 
-revoke
+Firstly, copy the hash for the commit to remove: ::
+
+    git log
+
+Use the copied hash below: ::
+
+    git revert <hash>
+
+View the commits: ::
+
+    git log
+
+Use the has for the original commit and the reverted commit to compare them: ::
+
+    git diff <hash_original> <hash_reverted>
+
+----
 
 
+Git Stash
+--------------------
 
+Use this when you want to store changes in a feature branch but not commit them yet. ::
+
+    git stash save "<message about context>"
+
+All the changes will appear to be gone, but are stashed. To get a list of stashes: ::
+
+    git stash list
+
+This lists the stash id, the branch and the message. 
+To bring back the changes that were stashed: ::
+
+    git stash apply <stashID>
+
+To return to were you were: ::
+
+    git checkout -- .
+
+To apply the first stash and drop or delete the stash: ::
+
+    git stash pop
+
+To drop a stash that is not needed: ::
+
+    git stash drop <stashID>
+
+To drop all stashes: ::
+
+    git stash clear
+
+Git Stash from master to feature branch
+-----------------------------------------------------
+Steps to take when accidentally working in master branch. ::
+
+    git stash save "feature in master for newfeaturebranch"
+    git status
+    git diff
+    git checkout <newfeaturebranch>
+    git stash pop
+    git diff
+    git add .
+    git commit -m "new feature from master"
 
 
 ----
+
 
 Remove the git tracking (delete hidden .git folder)
 -----------------------------------------------------------

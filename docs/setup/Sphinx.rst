@@ -1,6 +1,8 @@
 Sphinx
 ============
 
+Sphinx is a documentation generator. This means that it takes a bunch of source files in plain text, and generates a bunch HTML. For our use case it takes plain text files in reStructuredText format, and outputs HTML.
+
 Install Sphinx
 ---------------------
 

@@ -101,7 +101,7 @@ custom css
 
 * See: :download:`custom.css <../_static/css/custom.css>`.
 * This contains custom css including that used in these docs for inline reST and the copy button extension used for code blocks.
-* See more deails at: https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html
+* See more details at: https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html
 
 
 custom logos

@@ -44,7 +44,7 @@ Images
 Sample code
 -------------
 * Python code blocks can be set out like the example below using the directive ``.. code-block:: python``.
-* Python line numbers can be incldued using the ``:linenos:`` option. ::
+* Python line numbers can be included using the ``:linenos:`` option. ::
 
     .. code-block:: python
         :linenos:
@@ -84,13 +84,14 @@ View docs as html
 ++++++++++++++++++++++
 * Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
-* eg: C:\\Users\\myname\\project-name\\docs
+* eg: C:\\projects\\project-name\\docs
 
 * Build an html version of the docs. ::
 
     make clean
     make html
 
+* ``make clean`` is need first since Sphinx only rebuilds pages that have changed.
 
 * Open the index file ``_build/html/index.html`` in a web browser to see the docs.
 * The html can also be viewed in the browser using the VSCode terminal. ::
@@ -102,7 +103,7 @@ View docs as html using localhost
 +++++++++++++++++++++++++++++++++++++++
 * Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
-* eg: C:\\Users\\myname\\project-name\\docs
+* eg: C:\\projects\\project-name\\docs
 
 * Build an html version of the docs using the the VSCode terminal. ::
 

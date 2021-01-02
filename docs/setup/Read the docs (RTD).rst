@@ -16,7 +16,7 @@ Import GitHub project
 ---------------------------
 * Go to https://readthedocs.org/dashboard/
 * Click: Import project
-* Click refresh to show all GitHub repos
+* Click refresh to show all GitHub repositories
 * Click on a plus sign for a repo
 * Name and URL are automatic
 * Advanced: enter "master" as branch for latest.

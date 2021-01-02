@@ -39,7 +39,7 @@ sphinx-rtd-theme Theme Options
         'collapse_navigation': False,  # False so nav entries have the [+] icons
         'sticky_navigation': False,  # False so the nav does not scroll
         'navigation_depth': 4,  # -1 for no limit
-        'includehidden': True,  # displayes toctree that are hidden
+        'includehidden': True,  # displays toctree that are hidden
         'titles_only': False  # False so page subheadings are in the nav.
     }
 
