@@ -18,7 +18,7 @@ Create docs folder
 
     cd docs
 
-sphinx-quickstart
+Sphinx-quickstart
 ---------------------
 * For more info on Sphinx, see: https://www.sphinx-doc.org/en/master/usage/quickstart.html
 * From the VSCode terminal, run from within the docs folder: ::

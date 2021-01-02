@@ -3,7 +3,7 @@ Git
 
 Install Git
 --------------
-Download and install git from https://git-scm.com/. Use all defaults.
+Download and install git version 2.0.0 (or newer) from https://git-scm.com/. Use all defaults.
 
 Set Git Name & Email
 -----------------------
@@ -21,5 +21,29 @@ From the cmd prompt: ::
 From the cmd prompt, confirm your settings with: ::
 
     git config --list
+
+
+Git in VSCode
+--------------
+
+Visual Studio Code has git support built in.
+
+For use of git in VSCode see: https://code.visualstudio.com/docs/editor/versioncontrol
+
+The main features are:
+
+* See the diff of the file you are editing in the gutter.
+* The Git Status Bar (lower left) shows the current branch, dirty indicators, incoming and outgoing commits.
+* You can do the most common git operations from within the editor:
+
+    * Initialize a repository.
+    * Clone a repository.
+    * Create branches and tags.
+    * Stage and commit changes.
+    * Push/pull/sync with a remote branch.
+    * Resolve merge conflicts.
+    * View diffs.
+
+* With an extension, you can also handle GitHub Pull Requests: https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github.
 
 

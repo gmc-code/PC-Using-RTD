@@ -1,6 +1,6 @@
 .. _GitHub new repo:
 
-GitHub new repo
+GitHub and VSCode
 ==============================
 * Create a fee account at github if you don't already have one.
 * Create new repo at github: https://github.com/ or at https://github.com/mygithubname?tab=repositories. 
@@ -58,7 +58,6 @@ Run from within the docs folder.::
 VSCode GitHub updates
 ----------------------------
 * Click on the ``source control icon`` on the left sidebar
-* Any changes to files or new files will be listed under Changes. ``U`` stands for untracked. ``M`` stands for modified.
 * Type in ``"doc update"`` or specific details as the message in the Source Control section.
 * Click the ``tick icon`` to commit changes
 * The Source Control Repositories section has icons and dropdowns for key commands.
@@ -75,3 +74,25 @@ See more: https://docs.microsoft.com/en-us/learn/modules/introduction-to-github-
 
 Recommended youtube: https://www.youtube.com/watch?v=3Tn58KQvWtU&list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi
 
+
+
+VSCode Git staging and commits
+----------------------------------
+* Click on the ``source control icon`` on the left sidebar
+* Any changes to files or new files will be listed under **Changes**. 
+* ``U`` stands for untracked. 
+* ``M`` stands for modified.
+* ``D`` stands for delete as a result of a name change to a file.
+
+Changes and Staged Changes
++++++++++++++++++++++++++++++
+* Click a file to see the ``git diff`` visualization in split columns, showing changes since the last commit.
+* Click the clipboard icon to open the file in VSCode
+* Click the left loop arrow icon to discard changes to the file since the last commit.
+* Click the plus icon add the file to teh stage area. It will be listed under **Staged Changes**.
+
+Commits
+++++++++++
+* Type in specific details as the message in the Source Control section.
+* Click the ``tick icon`` to commit changes
+* If there are no stage

@@ -30,9 +30,10 @@ VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
    setup/VSCode special files.rst
    setup/VSCode conf.py.rst
    setup/Git.rst
-   setup/GitHub new repo.rst
+   setup/GitHub and VSCode.rst
    setup/Read the docs (RTD).rst
-   setup/Push VSCode changes to GitHub.rst
+   setup/VSCode to GitHub to RTDs.rst
+
 
 An alternate approach can be followed in the techwritingmatters tutorial which has 4 youtube videos.
 https://techwritingmatters.com/documenting-with-sphinx-tutorial-intro-overview#Structure_of_the_Tutorial
@@ -46,5 +47,5 @@ For collaboration and the use of feature branches for development see the comman
    :caption: More on Git:
    :numbered:
 
-   setup/Git commands.rst
+   setup/Git CLI.rst
 
