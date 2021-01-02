@@ -10,7 +10,7 @@ For the book that was the basis of the videos, see: https://git-scm.com/book/en/
 ----
 
 Git Help
-----------
+==============================
 Help formats: ::
 
     git config --Help
@@ -19,14 +19,14 @@ Help formats: ::
 ----
 
 2 scenarios:
---------------------
+==============================
 #. Existing project on local machine
 #. Clone remote project to work on
 
 ----
 
 1. Initialize the repository on local machine
----------------------------------------------
+============================================================
 To initialize a repository from existing code, first change the command line directory to the project folder: ::
 
     cd "C:\repos\PC-using-RTD"
@@ -45,7 +45,7 @@ To check the status of the git: ::
 
 
 Ignore files
----------------
+------------------------------
 Add the ``.gitignore`` file from within the **project** folder. ::
 
     type nul > .gitignore
@@ -65,7 +65,7 @@ To remove all files within the **project** folder from the staging area: ::
 
 
 Add files to Staging Area
----------------------------------
+------------------------------
 To add a single file from within the **project** folder to the staging area: ::
 
     git add filename
@@ -89,7 +89,7 @@ git add . is the same as git add -A mydir/ depending on the working directory
 
 
 Commit files from Staging Area
----------------------------------
+------------------------------
 To commit files from staging area: ::
 
     git commit -m "First commit"
@@ -104,7 +104,7 @@ To add files to staging area and commit at once: ::
 
 
 Remove files from Staging Area
----------------------------------
+------------------------------
 To remove a single file from within the **project** folder from the staging area: ::
 
     git rm --cached filename
@@ -126,7 +126,7 @@ To remove all files within the **project** folder from the staging area: ::
 
 
 2. Clone remote project to work on
-------------------------------------------
+============================================================
 Clone a git repository to a local folder. ::
 
     git clone <url> <destination>
@@ -140,7 +140,7 @@ Use a foldername within the working directory as the destination. ::
     git clone https://github.com/gmc-code/PC-Using-RTD.git "clonedrepo"
 
 Commit files from Staging Area
----------------------------------
+------------------------------
 To commit files from staging area: ::
 
     git commit -m "First commit"
@@ -154,24 +154,8 @@ To add files to staging area and commit at once: ::
     git commit -a -m "Second commit"
 
 
-
-2. Clone remote project to work on
-------------------------------------------
-Clone a git repository to a local folder. ::
-
-    git clone <url> <destination>
-
-Use a dot for the destination to use the working directory as the destination. ::
-
-    git clone https://github.com/gmc-code/PC-Using-RTD.git .
-
-Use a foldername within the working directory as the destination. ::
-
-    git clone https://github.com/gmc-code/PC-Using-RTD.git "clonedrepo"
-
-
 View information about remote repository
-------------------------------------------
+------------------------------------------------------------
 To list info about the repository: ::
     git remote -v
 
@@ -181,13 +165,13 @@ To list all the local and remote branches in the repo: ::
 
 
 View changes made 
-------------------------------------------
+------------------------------
 To show changes to files: ::
     git diff
 
 
 Commit changes to files
----------------------------------
+------------------------------
 To commit files from staging area: ::
 
     git diff
@@ -198,7 +182,7 @@ To commit files from staging area: ::
 
 
 Push commit to remote repo
----------------------------------
+------------------------------
 Pull from remote first to include other users changes then push: ::
 
     git pull origin master
@@ -211,7 +195,7 @@ Push updates the remote branch: ::
 
 
 Create branch for desired feature to work in
------------------------------------------------------
+------------------------------------------------------------
 Create new branch: ::
 
     git branch mygitcmds
@@ -236,7 +220,7 @@ To list all the local and remote branches in the repo: ::
 
 
 Merge a branch
------------------------------------------------------
+------------------------------
 Steps to merge ``mygitcmds`` branch to master branch: ::
 
     git checkout master
@@ -247,7 +231,7 @@ Steps to merge ``mygitcmds`` branch to master branch: ::
 
 
 Delete a branch after merging it
------------------------------------------------------
+------------------------------------------------------------
 Steps to delete ``mygitcmds`` branch: ::
 
     git branch --merged  
@@ -260,17 +244,17 @@ Steps to delete ``mygitcmds`` branch: ::
 
 
 Make changes that have not yet been pushed
------------------------------------------------------
+============================================================
 
 Remove file from commit not yet pushed
------------------------------------------------------
+------------------------------------------------------------
 Undo changes in a file ``filename``: ::
 
     git checkout filename
 
 
 Change commit message not yet pushed
------------------------------------------------------
+------------------------------------------------------------
 Undo commit message: ::
 
     git commit --amend -m "New message"
@@ -289,7 +273,7 @@ View details of changed files since last commit: ::
     git log --stat
 
 Move commit from master to feature branch not yet pushed
------------------------------------------------------------
+------------------------------------------------------------
 Use this after accidentally make commit to master branch instead of feature branch. Move commit: ::
 
     git log
@@ -316,7 +300,7 @@ Then return master branch. ::
     git log
 
 Soft reset
----------------
+------------------------------
 Then copy hash of initial commit to use in soft reset.  ::
 
     git reset --soft <hash>
@@ -326,7 +310,7 @@ Then copy hash of initial commit to use in soft reset.  ::
 The soft reset kept work in modified files as shown by status.
 
 Default reset
----------------
+------------------------------
 A mixed (default) reset keeps changes but they are left in working area and are not in staging area. ::
 
     git reset <hash>
@@ -334,7 +318,7 @@ A mixed (default) reset keeps changes but they are left in working area and are 
     git status
 
 Hard reset
----------------
+------------------------------
 A hard reset returns track files back to state at time of the (hash) commit and leaves out changes from files. ::
 
     git reset --hard <hash>
@@ -354,7 +338,7 @@ The working directory will then be clean as shown by: ::
 
 
 Recover from Hard reset
----------------------------
+------------------------------
 Get a log of commits in order from last commit: ::
 
     git reflog
@@ -377,7 +361,7 @@ View branches to check: ::
 
 
 Make changes when changes have been pushed
------------------------------------------------------
+============================================================
 Create new commits to undo changes.
 
 Firstly, copy the hash for the commit to remove: ::
@@ -400,7 +384,7 @@ Use the has for the original commit and the reverted commit to compare them: ::
 
 
 Git Stash
---------------------
+==============================
 
 Use this when you want to store changes in a feature branch but not commit them yet. ::
 
@@ -432,7 +416,7 @@ To drop all stashes: ::
     git stash clear
 
 Git Stash from master to feature branch
------------------------------------------------------
+------------------------------------------------------------
 Steps to take when accidentally working in master branch. ::
 
     git stash save "feature in master for newfeaturebranch"
@@ -449,7 +433,7 @@ Steps to take when accidentally working in master branch. ::
 
 
 Remove the git tracking (delete hidden .git folder)
------------------------------------------------------------
+============================================================
 * Use RMDIR /Q/S foldername  or RD /Q/S foldername
 * /Q -- Quiet mode, won't prompt for confirmation to delete folders.
 * /S -- Run the operation on all folders of the selected path.

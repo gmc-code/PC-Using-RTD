@@ -115,5 +115,3 @@ VSCode starting from **Cloning a repository**
 * For steps involved in starting by cloning a repository see: https://www.youtube.com/watch?v=sz2EM-gkEs0&list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi&index=2
 * If the repository is not a restructuredtext project with .rst files, ``sphinx-quickstart`` may need to be run once the repo is cloned to the local machine.
 
-
-

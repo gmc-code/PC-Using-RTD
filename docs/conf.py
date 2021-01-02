@@ -4,6 +4,13 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+from os.path import abspath, dirname
+import sys
+MODULE_ROOT_DIR = dirname(dirname(abspath(__file__)))
+# append module root directory to sys.path
+if MODULE_ROOT_DIR not in sys.path:
+    sys.path.insert(0, MODULE_ROOT_DIR)
+
 # -- Project information -----------------------------------------------------
 
 
@@ -20,6 +27,7 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton'
 ]
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -78,6 +86,42 @@ html_theme_options = {
 # -- RTDs logos -------------------------------------------------
 html_favicon = "_static/favicon.ico"
 html_logo = "_static/logo.png"
+
+
+# -- Options for LaTeX output ------------------------------------------------
+
+# -- Options for LaTeX output --------------------------------------------------
+
+latex_elements = {
+    'papersize': 'a4',
+    'fontpkg': '',
+    'fncychap': '',
+    'maketitle': '',
+    'pointsize': '',
+    'preamble': '',
+    'releasename': "",
+    'babel': '',
+    'printindex': '',
+    'fontenc': '',
+    'inputenc': '',
+    'classoptions': '',
+    'utf8extra': '',
+
+}
+
+#latex_additional_files = []
+
+latex_documents = [
+    ('index', 'PC-USING-RTD.tex', u'PC-USING-RTD',
+     u'GMC', 'howto'),
+]
+
+latex_show_pagerefs = False
+latex_domain_indices = False
+latex_use_modindex = False
+#latex_logo = None
+#latex_show_urls = False
+
 
 # -- Other Options -------------------------------------------------
 # easiest way to add substitutions to each file

@@ -8,7 +8,7 @@ Create docs folder
 ==============================
 * Create a project folder with the same name that will be used in GitHub for the repository name. See :ref:`GitHub new repo`
 * Open a project folder from within VSCode.
-* Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`\`` to open the VSCode terminal. 
+* Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal. 
 * From the VSCode terminal, create a docs folder within the project folder::
 
     mkdir docs

@@ -7,7 +7,7 @@ Sphinx is a documentation generator. This means that it takes a bunch of source 
 Install Sphinx
 ==============================
 
-* Press :kbd:`⊞Win` + :kbd:`X` + :kbd:`C` to open the Command prompt. 
+* Press :kbd:`Win` + :kbd:`X` + :kbd:`C` to open the Command prompt. 
 * From the cmd prompt install the Sphinx library (v3.4.1 at Dec 2020)::
 
     pip install sphinx
