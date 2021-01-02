@@ -3,6 +3,7 @@
 ==============================
 GitHub and VSCode
 ==============================
+
 * Create a fee account at github if you don't already have one.
 
 ----
@@ -28,13 +29,13 @@ VSCode starting from **creating a new empty repository**
 
 
 GitHub settings
-----------------------
+------------------------------
 * Set Repository default branch to ``master`` (``main`` is used by some).
 * https://github.com/settings/repositories
 
 
 Initialize GitHub in VSCode
---------------------------------
+------------------------------
 In VSCode, initialize git locally by following the steps:
 
 Manually, step by step:
@@ -63,7 +64,7 @@ Run from within the docs folder.::
 
     
 VSCode GitHub updates
-----------------------------
+------------------------------
 * Click on the ``source control icon`` on the left sidebar
 * Type in ``"doc update"`` or specific details as the message in the Source Control section.
 * Click the ``tick icon`` to commit changes
@@ -72,7 +73,7 @@ VSCode GitHub updates
 
 
 VSCode GitHub controls
---------------------------
+------------------------------
 * Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`P` to open the Command Palette. 
 * Start typing “Git” to see the various commands.
 
@@ -84,7 +85,7 @@ Recommended youtube: https://www.youtube.com/watch?v=3Tn58KQvWtU&list=PLpPVLI0A0
 
 
 VSCode Git staging and commits
-----------------------------------
+------------------------------------------------------------
 * Click on the ``source control icon`` on the left sidebar
 * Any changes to files or new files will be listed under **Changes**. 
 * ``U`` stands for untracked. 
@@ -99,7 +100,7 @@ Changes and Staged Changes
 * Click the plus icon add the file to teh stage area. It will be listed under **Staged Changes**.
 
 Commits
-~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 * Type in specific details as the message in the Source Control section.
 * Click the ``tick icon`` to commit changes
 * If there are no staged files (Only Changes is shown), then all files are staged and committed.
@@ -111,5 +112,8 @@ Commits
 VSCode starting from **Cloning a repository**
 ============================================================
 
-https://www.youtube.com/watch?v=sz2EM-gkEs0&list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi&index=2
+* For steps involved in starting by cloning a repository see: https://www.youtube.com/watch?v=sz2EM-gkEs0&list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi&index=2
+* If the repository is not a restructuredtext project with .rst files, ``sphinx-quickstart`` may need to be run once the repo is cloned to the local machine.
+
+
 
