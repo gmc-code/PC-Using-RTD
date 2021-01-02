@@ -66,4 +66,4 @@ Custom logo
 
     html_favicon = "_static/favicon.ico"
 
-    
+
