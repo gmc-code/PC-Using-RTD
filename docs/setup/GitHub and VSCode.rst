@@ -74,7 +74,7 @@ VSCode GitHub updates
 
 VSCode GitHub controls
 ------------------------------
-* Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`P` to open the Command Palette. 
+* Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`P` to open the Command Palette. 
 * Start typing “Git” to see the various commands.
 
 

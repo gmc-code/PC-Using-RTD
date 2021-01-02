@@ -84,7 +84,7 @@ View docs as html in VSCode
 
 View docs as html
 ------------------------------
-* Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`\`` to open the VSCode terminal.
+* Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
 * eg: C:\\projects\\project-name\\docs
 
@@ -103,7 +103,7 @@ View docs as html
 
 View docs as html using localhost
 ------------------------------------------------------------
-* Press :kbd:`ctrl` + :kbd:`⇧shift` + :kbd:`\`` to open the VSCode terminal.
+* Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
 * eg: C:\\projects\\project-name\\docs
 
