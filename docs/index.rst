@@ -34,15 +34,17 @@ VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
    setup/Read the docs (RTD).rst
    setup/Push VSCode changes to GitHub.rst
 
+An alternate approach can be followed in the techwritingmatters tutorial which has 4 youtube videos.
+https://techwritingmatters.com/documenting-with-sphinx-tutorial-intro-overview#Structure_of_the_Tutorial
+It starts by cloning a new GitHub repository to the computer. It is Mac based. It uses a text editor instead of VSCode.
+
+The above steps are suitable for one author using the master branch only. 
+For collaboration and the use of feature branches for development see the command line interface (CLI) commands details below:
+
 .. toctree::
    :maxdepth: 3
    :caption: More on Git:
    :numbered:
 
    setup/Git commands.rst
-
-
-An alternate approach can be followed in the techwritingmatters tutorial which has 4 youtube videos.
-https://techwritingmatters.com/documenting-with-sphinx-tutorial-intro-overview#Structure_of_the_Tutorial
-It starts by cloning a new GitHub repository to the computer. It is Mac based. It uses a text editor instead of VSCode.
 

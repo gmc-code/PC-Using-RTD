@@ -88,8 +88,8 @@ View docs as html
 
 * Build an html version of the docs. ::
 
-    .\make clean
-    .\make html
+    make clean
+    make html
 
 
 * Open the index file ``_build/html/index.html`` in a web browser to see the docs.
@@ -118,4 +118,12 @@ View docs as html using localhost
 * The html can also be viewed in the browser using the the VSCode terminal. ::
     
     start chrome http://localhost:8000/_build/html/
+
+
+.. tip::
+    Sometimes ``.\`` will be needed with ``make`` ::
+
+        .\make clean
+        .\make html
+
 
