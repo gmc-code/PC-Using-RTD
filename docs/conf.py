@@ -127,7 +127,7 @@ latex_elements = {
         \usepackage{transparent}
         \usepackage{eso-pic}
         \usepackage{lipsum}
-    
+
         %% spacing between line
         \usepackage{setspace}
         %%%%\onehalfspacing
