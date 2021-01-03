@@ -19,7 +19,7 @@ VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
 
 .. toctree::
    :maxdepth: 3
-   :caption: Steps:
+   :caption: Table of Contents:
    :numbered:
 
    setup/Requirements.rst

@@ -86,9 +86,9 @@ html_logo = "_static/logo.png"
 # see https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html for latex code
 
 
-latex_engine = 'pdflatex'
+latex_engine = 'xelatex'  # pdflatex'
 latex_elements = {
-    # ADDED BY ME TO TEST
+    # need to use svgcolour names for title and tip border
     'passoptionstopackages': r'\PassOptionsToPackage{svgnames}{xcolor}',
     #
     # The paper size ('letterpaper' or 'a4paper').
@@ -96,8 +96,8 @@ latex_elements = {
     'papersize': 'a4paper',
     'releasename': " ",
     # Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup
-    # 'fncychap': '\\usepackage[Lenny]{fncychap}',
-    'fncychap': '\\usepackage{fncychap}',
+    'fncychap': '\\usepackage[Rejne]{fncychap}',
+    # 'fncychap': '\\usepackage{fncychap}',
     'fontpkg': '\\usepackage{amsmath,amsfonts,amssymb,amsthm}',
 
     'figure_align': 'htbp',
@@ -127,19 +127,12 @@ latex_elements = {
         \usepackage{transparent}
         \usepackage{eso-pic}
         \usepackage{lipsum}
-
+    
         %% spacing between line
         \usepackage{setspace}
         %%%%\onehalfspacing
         %%%%\doublespacing
         \singlespacing
-
-        %%%%%%%%%%% attempt to remove chapter v space before it
-        \usepackage{etoolbox} % provides macros for patching macros
-        \makeatletter
-        \patchcmd{\@makechapterhead}{50\p@}{0\p@}{}{}
-        \patchcmd{\@makeschapterhead}{50\p@}{0\p@}{}{}
-        \makeatother
 
         %%%%%%%%%%% datetime
         \usepackage{datetime}
@@ -147,28 +140,27 @@ latex_elements = {
         \newdateformat{MonthYearFormat}{%
             \monthname[\THEMONTH], \THEYEAR}
 
+        %%% page
+        \fancyfoot[LO, LE]{\thepage}
 
-        %%% page number
-        \fancyfoot[CO, CE]{\thepage}
-
-        \renewcommand{\headrulewidth}{0.5pt}
-        \renewcommand{\footrulewidth}{0.5pt}
+        %%%\renewcommand{\headrulewidth}{0.3pt}
+        %%%\renewcommand{\footrulewidth}{0.3pt}
 
         \RequirePackage{tocbibind} %%% comment this to remove page number for following
-        \addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
+        % \addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
         % \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
 
 
         %%reduce spacing for itemize
-        \usepackage{enumitem}
-        \setlist{nosep}
+        % \usepackage{enumitem}
+        % \setlist{nosep}
 
-        %%%%%%%%%%% Quote Styles at the top of chapter
-        \usepackage{epigraph}
-        \setlength{\epigraphwidth}{0.8\columnwidth}
-        \newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
+        %%%%%%%%%%% Quote Styles at the top of chapter  use by reST directive: .. epigraph::
+        %  \usepackage{epigraph}
+        % \setlength{\epigraphwidth}{0.8\columnwidth}
+        % \newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
         %%%%%%%%%%% Quote for all places except Chapter
-        \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
+        % \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
     ''',
 
 
@@ -184,7 +176,7 @@ latex_elements = {
             \vspace{0mm}
             \begin{figure}[!h]
                 \centering
-                \includegraphics[scale=0.3]{logo.png}
+                \includegraphics[scale=1.0]{logo.png}
             \end{figure}
 
             \vspace{0mm}

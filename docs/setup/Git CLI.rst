@@ -7,7 +7,9 @@ For an introduction to command line use of git in the terminal (CLI) see: https:
 Below are some git CLI commands that might be useful.
 For the book that was the basis of the videos, see: https://git-scm.com/book/en/v2
 
+
 ----
+
 
 Git Help
 ==============================
@@ -16,14 +18,18 @@ Help formats: ::
     git config --Help
     git help config
 
+
 ----
+
 
 2 scenarios:
 ==============================
 #. Existing project on local machine
 #. Clone remote project to work on
 
+
 ----
+
 
 1. Initialize the repository on local machine
 ============================================================
@@ -121,6 +127,7 @@ To remove all files from within a subfolder within the **project** folder from t
 To remove all files within the **project** folder from the staging area: ::
 
     git reset
+
 
 ----
 
@@ -240,7 +247,7 @@ Steps to delete ``mygitcmds`` branch: ::
     git push origin --delete mygitcmds
 
 
----
+----
 
 
 Make changes that have not yet been pushed
@@ -379,6 +386,7 @@ View the commits: ::
 Use the has for the original commit and the reverted commit to compare them: ::
 
     git diff <hash_original> <hash_reverted>
+
 
 ----
 

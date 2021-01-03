@@ -4,6 +4,8 @@
 VSCode reStructuredText
 ==============================
 
+Usage
+==============================
 * Make your doc files in VSCode using reStructuredText .rst files.
 * Use reStructuredText formatting syntax in your docs files.
 * Some important details are specified below.
@@ -18,7 +20,7 @@ index.rst
 .. tip::
    index.rst should at least contain the table of contents ``.. toctree::`` directive.
 
-documentation as .rst files
+Documentation as .rst files
 ==============================
 * Make your doc files in VSCode using reStructuredText .rst files.
 
