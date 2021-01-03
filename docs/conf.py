@@ -4,12 +4,6 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-from os.path import abspath, dirname
-import sys
-MODULE_ROOT_DIR = dirname(dirname(abspath(__file__)))
-# append module root directory to sys.path
-if MODULE_ROOT_DIR not in sys.path:
-    sys.path.insert(0, MODULE_ROOT_DIR)
 
 # -- Project information -----------------------------------------------------
 
@@ -89,48 +83,173 @@ html_logo = "_static/logo.png"
 
 
 # -- Options for LaTeX output ------------------------------------------------
+# see https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html for latex code
 
-# -- Options for LaTeX output --------------------------------------------------
 
+latex_engine = 'pdflatex'
 latex_elements = {
-    'papersize': 'a4',
-    'fontpkg': '',
-    'fncychap': '',
-    'maketitle': '',
-    'pointsize': '',
-    'preamble': '',
-    'releasename': "",
-    'babel': '',
-    'printindex': '',
-    'fontenc': '',
-    'inputenc': '',
-    'classoptions': '',
-    'utf8extra': '',
+    # ADDED BY ME TO TEST
+    'passoptionstopackages': r'\PassOptionsToPackage{svgnames}{xcolor}',
+    #
+    # The paper size ('letterpaper' or 'a4paper').
+    #
+    'papersize': 'a4paper',
+    'releasename': " ",
+    # Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup
+    # 'fncychap': '\\usepackage[Lenny]{fncychap}',
+    'fncychap': '\\usepackage{fncychap}',
+    'fontpkg': '\\usepackage{amsmath,amsfonts,amssymb,amsthm}',
+
+    'figure_align': 'htbp',
+    # The font size ('10pt', '11pt' or '12pt').
+    #
+    'pointsize': '12pt',
+
+    # Additional stuff for the LaTeX preamble.
+    #
+    'preamble': r'''
+        %%%%%%%%%%%%%%%%%%%% preamble %%%%%%%%%%%%%%%%%%
+        %%%add number to subsubsection 2=subsection, 3=subsubsection
+        %%% below subsubsection is not good idea.
+        \setcounter{secnumdepth}{3}
+        %
+        %%%% Table of content upto 2=subsection, 3=subsubsection
+        \setcounter{tocdepth}{2}
+
+        \usepackage{amsmath,amsfonts,amssymb,amsthm}
+        \usepackage{graphicx}
+
+        %%% reduce spaces for Table of contents, figures and tables
+        %%% it is used "\addtocontents{toc}{\vskip -1.2cm}" etc. in the document
+        \usepackage[notlot,nottoc,notlof]{}
+
+        \usepackage{color}
+        \usepackage{transparent}
+        \usepackage{eso-pic}
+        \usepackage{lipsum}
+
+        %% spacing between line
+        \usepackage{setspace}
+        %%%%\onehalfspacing
+        %%%%\doublespacing
+        \singlespacing
+
+        %%%%%%%%%%% attempt to remove chapter v space before it
+        \usepackage{etoolbox} % provides macros for patching macros
+        \makeatletter
+        \patchcmd{\@makechapterhead}{50\p@}{0\p@}{}{}
+        \patchcmd{\@makeschapterhead}{50\p@}{0\p@}{}{}
+        \makeatother
+
+        %%%%%%%%%%% datetime
+        \usepackage{datetime}
+
+        \newdateformat{MonthYearFormat}{%
+            \monthname[\THEMONTH], \THEYEAR}
+
+
+        %%% page number
+        \fancyfoot[CO, CE]{\thepage}
+
+        \renewcommand{\headrulewidth}{0.5pt}
+        \renewcommand{\footrulewidth}{0.5pt}
+
+        \RequirePackage{tocbibind} %%% comment this to remove page number for following
+        \addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
+        % \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
+
+
+        %%reduce spacing for itemize
+        \usepackage{enumitem}
+        \setlist{nosep}
+
+        %%%%%%%%%%% Quote Styles at the top of chapter
+        \usepackage{epigraph}
+        \setlength{\epigraphwidth}{0.8\columnwidth}
+        \newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
+        %%%%%%%%%%% Quote for all places except Chapter
+        \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
+    ''',
+
+
+    'maketitle': r'''
+        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page 1
+
+        \begin{titlepage}
+            \centering
+
+            \vspace*{10mm} %%% * is used to give space from top
+            \textbf{\Huge {PC-USING-RTD}}
+
+            \vspace{0mm}
+            \begin{figure}[!h]
+                \centering
+                \includegraphics[scale=0.3]{logo.png}
+            \end{figure}
+
+            \vspace{0mm}
+            \Large \textbf{{GMC}}
+
+            \small Created : Jan 2021
+
+            \vspace*{0mm}
+            \small  Last updated : \MonthYearFormat\today
+
+        \end{titlepage}
+
+        \clearpage
+        \pagenumbering{roman}
+        \tableofcontents
+        \clearpage
+        \pagenumbering{arabic}
+
+        ''',
+    # Latex figure (float) alignment
+    #
+    # 'figure_align': 'htbp',
+
+    # Latex colours named see: https://www.latextemplates.com/svgnames-colors
+    # sphinx latex see https://www.sphinx-doc.org/en/master/latex.html
+    # cautionborder = 3pt,
+    # cautionBgColor = {named}{LightCyan}}
+    # \usepackage{titlesec}
+    # \titleformat{\section}[block]{Large \filcenter}{}{1em}{} %\sffamily
+    # \titleformat{\subsection}[hang]{\filright \itshape}{}{1em}{}
+    # %\titleformat{\chapter}[hang]{\filright \bfseries}{}{1em}{}
+    # InnerLinkColor default {rgb}{0.208, 0.374, 0.486}. linkcolor and citecolor.
+    # OuterLinkColor default {rgb}{0.216, 0.439, 0.388}. filecolor, menucolor, and urlcolor.
+    # TitleColor default {rgb}{0.126, 0.263, 0.361}. titles(as configured via use of package “titlesec”.)
+    # {named}{NavyBlue}
+
+    'sphinxsetup': \
+    'hmargin={0.7in,0.7in}, vmargin={0.7in,0.7in}, \
+        verbatimwithframe=true, \
+        VerbatimBorderColor = {named}{LightGrey}, \
+        noteBorderColor = {named}{LightGrey}, \
+        hintBorderColor = {named}{LightGrey}, \
+        importantBorderColor = {named}{LightGrey}, \
+        tipBorderColor = {named}{LightGrey}, \
+        warningBorderColor = {named}{LightGrey}, \
+        cautionBorderColor = {named}{LightGrey}, \
+        errorBorderColor = {named}{LightGrey}, \
+        attentionBorderColor = {named}{LightGrey}, \
+        dangerBorderColor = {named}{LightGrey}, \
+        TitleColor = {named}{NavyBlue}, \
+        HeaderFamily=\\rmfamily\\bfseries, \
+        InnerLinkColor= {named}{NavyBlue}, \
+        OuterLinkColor= {named}{NavyBlue}',
+
+    'tableofcontents': ' ',
 
 }
 
-#latex_additional_files = []
+latex_logo = '_static/logo.png'
+
+# sectioning defaults to chapter when using manual
+
+latex_toplevel_sectioning = 'chapter'
 
 latex_documents = [
-    ('index', 'PC-USING-RTD.tex', u'PC-USING-RTD',
-     u'GMC', 'howto'),
+    (master_doc, 'PC-USING-RTD.tex', 'PC-USING-RTD',
+     'GMC', 'report'),
 ]
-
-latex_show_pagerefs = False
-latex_domain_indices = False
-latex_use_modindex = False
-#latex_logo = None
-#latex_show_urls = False
-
-
-# -- Other Options -------------------------------------------------
-# easiest way to add substitutions to each file
-rst_prolog = """
-
-.. |br| raw:: html
-
-    <br>
-
-.. | | unicode:: 0xA0
-
-"""

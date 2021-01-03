@@ -60,14 +60,14 @@ Sample code
 
 * This displays as:
 
-.. code-block:: python
-    :linenos:
+    .. code-block:: python
+        :linenos:
 
-    from microbit import *
+        from microbit import *
 
-    x = 0
-    for y in range(0, 5):
-        display.set_pixel(x, y, 9)
+        x = 0
+        for y in range(0, 5):
+            display.set_pixel(x, y, 9)
 
 
 
@@ -86,7 +86,7 @@ View docs as html
 ------------------------------
 * Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
-* eg: C:\\projects\\project-name\\docs
+* eg: C:/projects/project-name/docs
 
 * Build an html version of the docs. ::
 
@@ -105,7 +105,7 @@ View docs as html using localhost
 ------------------------------------------------------------
 * Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
-* eg: C:\\projects\\project-name\\docs
+* eg: C:/projects/project-name/docs
 
 * Build an html version of the docs using the the VSCode terminal. ::
 

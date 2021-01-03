@@ -14,7 +14,7 @@ Create docs folder
     mkdir docs
 
 
-* eg: C:\\projects\\project-name\\docs
+* eg: C:/projects/project-name/docs
 * From the VSCode terminal, change directory to the docs folder e.g.::
 
     cd docs
