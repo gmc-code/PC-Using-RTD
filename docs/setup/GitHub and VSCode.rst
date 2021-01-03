@@ -4,6 +4,9 @@
 GitHub and VSCode
 ==============================
 
+GitHub account
+============================================================
+
 * Create a fee account at github if you don't already have one.
 
 ----

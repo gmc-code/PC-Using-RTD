@@ -136,7 +136,6 @@ latex_elements = {
 
         %%%%%%%%%%% datetime
         \usepackage{datetime}
-
         \newdateformat{MonthYearFormat}{%
             \monthname[\THEMONTH], \THEYEAR}
 
@@ -147,20 +146,20 @@ latex_elements = {
         %%%\renewcommand{\footrulewidth}{0.3pt}
 
         \RequirePackage{tocbibind} %%% comment this to remove page number for following
-        % \addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
-        % \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
+        \addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
+        \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
 
 
         %%reduce spacing for itemize
-        % \usepackage{enumitem}
-        % \setlist{nosep}
+        \usepackage{enumitem}
+        \setlist{nosep}
 
         %%%%%%%%%%% Quote Styles at the top of chapter  use by reST directive: .. epigraph::
-        %  \usepackage{epigraph}
-        % \setlength{\epigraphwidth}{0.8\columnwidth}
-        % \newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
+        \usepackage{epigraph}
+        \setlength{\epigraphwidth}{0.8\columnwidth}
+        \newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
         %%%%%%%%%%% Quote for all places except Chapter
-        % \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
+        \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
     ''',
 
 
