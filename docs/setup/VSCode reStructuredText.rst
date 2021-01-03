@@ -111,8 +111,8 @@ View docs as html using localhost
 
 * Build an html version of the docs using the the VSCode terminal. ::
 
-    .\make clean
-    .\make html
+    make clean
+    make html
 
 * Create a local server using the the VSCode terminal. ::
 
