@@ -1,9 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-
+# see https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
 
@@ -19,7 +15,7 @@ author = 'GMC'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
 ]
 
 
@@ -40,6 +36,8 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
+# if using To Dos and want them to showup
+# todo_include_todos = True
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -73,18 +71,17 @@ html_theme_options = {
     'collapse_navigation': False,  # False so nav entries have the [+] icons
     'sticky_navigation': False,  # False so the nav does not scroll
     'navigation_depth': 4,  # -1 for no limit
-    'includehidden': True,  # displayes toctree that are hidden
+    'includehidden': True,  # displays toctree that are hidden
     'titles_only': False  # False so page subheadings are in the nav.
 }
 
 # -- RTDs logos -------------------------------------------------
 html_favicon = "_static/favicon.ico"
-html_logo = "_static/logo.png"
+html_logo = "_static/logo_navyblue.png"
 
 
 # -- Options for LaTeX output ------------------------------------------------
 # see https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html for latex code
-
 
 latex_engine = 'xelatex'  # pdflatex'
 latex_elements = {
@@ -95,152 +92,168 @@ latex_elements = {
     #
     'papersize': 'a4paper',
     'releasename': " ",
+    #
     # Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup
-    'fncychap': '\\usepackage[Rejne]{fncychap}',
+    # 'fncychap': '\\usepackage[Rejne]{fncychap}',
     # 'fncychap': '\\usepackage{fncychap}',
+    #
     'fontpkg': '\\usepackage{amsmath,amsfonts,amssymb,amsthm}',
-
-    'figure_align': 'htbp',
+    #
     # The font size ('10pt', '11pt' or '12pt').
-    #
     'pointsize': '12pt',
-
-    # Additional stuff for the LaTeX preamble.
     #
-    'preamble': r'''
-        %%%%%%%%%%%%%%%%%%%% preamble %%%%%%%%%%%%%%%%%%
-        %%%add number to subsubsection 2=subsection, 3=subsubsection
-        %%% below subsubsection is not good idea.
-        \setcounter{secnumdepth}{3}
-        %
-        %%%% Table of content upto 2=subsection, 3=subsubsection
-        \setcounter{tocdepth}{2}
-
-        \usepackage{amsmath,amsfonts,amssymb,amsthm}
-        \usepackage{graphicx}
-
-        %%% reduce spaces for Table of contents, figures and tables
-        %%% it is used "\addtocontents{toc}{\vskip -1.2cm}" etc. in the document
-        \usepackage[notlot,nottoc,notlof]{}
-
-        \usepackage{color}
-        \usepackage{transparent}
-        \usepackage{eso-pic}
-        \usepackage{lipsum}
-
-        %% spacing between line
-        \usepackage{setspace}
-        %%%%\onehalfspacing
-        %%%%\doublespacing
-        \singlespacing
-
-        %%%%%%%%%%% datetime
-        \usepackage{datetime}
-        \newdateformat{MonthYearFormat}{%
-            \monthname[\THEMONTH], \THEYEAR}
-
-        %%% page
-        \fancyfoot[LO, LE]{\thepage}
-
-        %%%\renewcommand{\headrulewidth}{0.3pt}
-        %%%\renewcommand{\footrulewidth}{0.3pt}
-
-        % \RequirePackage{tocbibind} %%% comment this to remove page number for following
-        % \addto\captionsenglish{\renewcommand{\contentsname}{Table of contents}}
-        % \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
-
-
-        %%reduce spacing for itemize
-        % \usepackage{enumitem}
-        % \setlist{nosep}
-
-        %%%%%%%%%%% Quote Styles at the top of chapter  use by reST directive: .. epigraph::
-        % \usepackage{epigraph}
-        % \setlength{\epigraphwidth}{0.8\columnwidth}
-        % \newcommand{\chapterquote}[2]{\epigraphhead[60]{\epigraph{\textit{#1}}{\textbf {\textit{--#2}}}}}
-        %%%%%%%%%%% Quote for all places except Chapter
-        % \newcommand{\sectionquote}[2]{{\quote{\textit{``#1''}}{\textbf {\textit{--#2}}}}}
-    ''',
-
-
-    'maketitle': r'''
-        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page 1
-
-        \begin{titlepage}
-            \centering
-
-            \vspace*{10mm} %%% * is used to give space from top
-            \textbf{\Huge {PC-USING-RTD}}
-
-            \vspace{0mm}
-            \begin{figure}[!h]
-                \centering
-                \includegraphics[scale=1.0]{logo.png}
-            \end{figure}
-
-            \vspace{0mm}
-            \Large \textbf{{GMC}}
-
-            \small Created : Jan 2021
-
-            \vspace*{0mm}
-            \small  Last updated : \MonthYearFormat\today
-
-        \end{titlepage}
-
-        \clearpage
-        \pagenumbering{roman}
-        \tableofcontents
-        \clearpage
-        \pagenumbering{arabic}
-
-        ''',
-    # Latex figure (float) alignment
+    'figure_align': 'htbp',
     #
-    # 'figure_align': 'htbp',
-
-    # Latex colours named see: https://www.latextemplates.com/svgnames-colors
-    # sphinx latex see https://www.sphinx-doc.org/en/master/latex.html
-    # cautionborder = 3pt,
-    # cautionBgColor = {named}{LightCyan}}
-    # \usepackage{titlesec}
-    # \titleformat{\section}[block]{Large \filcenter}{}{1em}{} %\sffamily
-    # \titleformat{\subsection}[hang]{\filright \itshape}{}{1em}{}
-    # %\titleformat{\chapter}[hang]{\filright \bfseries}{}{1em}{}
-    # InnerLinkColor default {rgb}{0.208, 0.374, 0.486}. linkcolor and citecolor.
-    # OuterLinkColor default {rgb}{0.216, 0.439, 0.388}. filecolor, menucolor, and urlcolor.
-    # TitleColor default {rgb}{0.126, 0.263, 0.361}. titles(as configured via use of package “titlesec”.)
-    # {named}{NavyBlue}
-
-    'sphinxsetup': \
-    'hmargin={0.7in,0.7in}, vmargin={0.7in,0.7in}, \
-        verbatimwithframe=true, \
-        VerbatimBorderColor = {named}{LightGrey}, \
-        noteBorderColor = {named}{LightGrey}, \
-        hintBorderColor = {named}{LightGrey}, \
-        importantBorderColor = {named}{LightGrey}, \
-        tipBorderColor = {named}{LightGrey}, \
-        warningBorderColor = {named}{LightGrey}, \
-        cautionBorderColor = {named}{LightGrey}, \
-        errorBorderColor = {named}{LightGrey}, \
-        attentionBorderColor = {named}{LightGrey}, \
-        dangerBorderColor = {named}{LightGrey}, \
-        TitleColor = {named}{NavyBlue}, \
-        HeaderFamily=\\rmfamily\\bfseries, \
-        InnerLinkColor= {named}{NavyBlue}, \
-        OuterLinkColor= {named}{NavyBlue}',
-
     'tableofcontents': ' ',
-
+    'transition': '\n\n\\vspace{24pt} {\\color{Gainsboro} \\rule{\\linewidth}{4pt} } \\bigskip\n\n '
+    #
 }
 
-latex_logo = '_static/logo.png'
+latex_elements['preamble'] = r'''
+    %%% preamble
+    %%% add number to subsubsection 2=subsection, 3=subsubsection
+    %%% below subsubsection is not good idea.
+    \setcounter{secnumdepth}{3}
+    %
+    %%%% Table of content upto 2=subsection, 3=subsubsection
+    \setcounter{tocdepth}{2}
+
+    \usepackage{amsmath,amsfonts,amssymb,amsthm}
+    \usepackage{graphicx}
+
+    %%% reduce spaces for Table of contents, figures and tables
+    %%% it is used "\addtocontents{toc}{\vskip -1.2cm}" etc. in the document
+    \usepackage[notlot,nottoc,notlof]{}
+
+    \usepackage{color}
+    \usepackage[dvipsnames*,svgnames]{xcolor}
+    \usepackage{transparent}
+    \usepackage{eso-pic}
+    \usepackage{lipsum}
+
+    %% spacing between line; \onehalfspacing \doublespacing
+    \usepackage{setspace}
+    \singlespacing
+
+    %%%%%%%%%%% datetime
+    \usepackage{datetime}
+    \newdateformat{MonthYearFormat}{%
+        \monthname[\THEMONTH], \THEYEAR}
+
+    % \RequirePackage{tocbibind} %%% comment this to remove page number for following
+    % \addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
+    % \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
+
+    %%% mycode chapter heading colour \fontsize{48}{50}
+    \makeatletter
+        \ChTitleVar{\centering \color{NavyBlue} \Huge\py@HeaderFamily}
+        \ChNameVar{\centering \color{NavyBlue} \Huge\py@HeaderFamily}
+        \ChNumVar{\centering \color{NavyBlue} \Large\py@HeaderFamily}
+        \ChRuleWidth{2pt}
+    \makeatother
+
+    %%reduce spacing for itemize
+    \usepackage{enumitem}
+    \setlist{nosep}
+
+    '''
+
+latex_elements['maketitle'] = r'''
+    \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page 1
+
+    \begin{titlepage}
+        \centering
+
+        \vspace*{40mm} %%% * is used to force space from top since first time is normally ignored
+        \textbf{\color{NavyBlue} \Huge {PC-USING-RTD}}
+
+        \vspace{10mm}
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[scale=1.0]{logo_navyblue.png}
+        \end{figure}
+
+        \vspace{10mm}
+        \LARGE \color{NavyBlue} {GMC}
+
+        \vspace{10mm}
+        \large \color{NavyBlue} Created : Jan 2021
+
+        \vspace*{-1mm}
+        \large \color{NavyBlue} Last updated : \MonthYearFormat\today
+
+    \end{titlepage}
+
+    \clearpage
+    \pagenumbering{roman}
+    \tableofcontents
+    \clearpage
+    \pagenumbering{arabic}
+
+    '''
+
+
+# Latex figure (float) alignment
+#
+# 'figure_align': 'htbp',
+
+# Latex colours named see: https://www.latextemplates.com/svgnames-colors
+# sphinx latex see https://www.sphinx-doc.org/en/master/latex.html
+# cautionborder = 3pt,
+# cautionBgColor = {named}{LightCyan}}
+# \usepackage{titlesec}
+# \titleformat{\section}[block]{Large \filcenter}{}{1em}{} %\sffamily
+# \titleformat{\subsection}[hang]{\filright \itshape}{}{1em}{}
+# %\titleformat{\chapter}[hang]{\filright \bfseries}{}{1em}{}
+# InnerLinkColor default {rgb}{0.208, 0.374, 0.486}. linkcolor and citecolor.
+# OuterLinkColor default {rgb}{0.216, 0.439, 0.388}. filecolor, menucolor, and urlcolor.
+# TitleColor default {rgb}{0.126, 0.263, 0.361}. titles(as configured via use of package “titlesec”.)
+
+# do not use r' string for latex_elements['sphinxsetup'].
+
+latex_elements['sphinxsetup'] = '''
+    hmargin={0.7in,0.7in}, vmargin={0.7in,0.7in}, \
+    verbatimwithframe=true, \
+    verbatimsep = 12pt, \
+    verbatimborder = 1.0pt, \
+    VerbatimColor = {named}{white}, \
+    VerbatimBorderColor = {named}{LightGrey}, \
+    noteBorderColor = {RGB}{106, 176, 222}, \
+    hintBorderColor = {RGB}{26, 188, 156}, \
+    importantBorderColor = {RGB}{26, 188, 156}, \
+    tipBorderColor = {RGB}{26, 188, 156}, \
+    \
+    warningBorderColor = {RGB}{240, 179, 126}, \
+    attentionBorderColor = {RGB}{240, 179, 126}, \
+    cautionBorderColor = {RGB}{240, 179, 126}, \
+    dangerBorderColor ={RGB}{242, 159, 151}, \
+    errorBorderColor = {RGB}{242, 159, 151}, \
+    warningBgColor = {RGB}{255, 237, 204}, \
+    attentionBgColor = {RGB}{255, 237, 204}, \
+    cautionBgColor = {RGB}{255, 237, 204}, \
+    dangerBgColor = {RGB}{253, 243, 242}, \
+    errorBgColor = {RGB}{253, 243, 242}, \
+    \
+    warningborder = 1pt, \
+    attentionborder = 1pt, \
+    cautionborder = 1pt, \
+    dangerborder = 1pt, \
+    errorborder = 1pt, \
+    \
+    TitleColor = {named}{NavyBlue}, \
+    InnerLinkColor= {named}{NavyBlue}, \
+    OuterLinkColor= {named}{NavyBlue}, \
+    \
+    HeaderFamily=\\rmfamily\\bfseries\
+
+    '''
+
+latex_logo = '_static/logo_navyblue.png'
 
 # sectioning defaults to chapter when using manual
-
 latex_toplevel_sectioning = 'chapter'
 
 latex_documents = [
     (master_doc, 'PC-USING-RTD.tex', 'PC-USING-RTD',
-     'GMC', 'report'),
+     'GMC', 'manual'),
 ]

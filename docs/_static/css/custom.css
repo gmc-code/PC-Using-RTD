@@ -4,6 +4,43 @@
     color: #3333ff;
     font-size: 90%!important;
 }
+/* ========================================== */
+/* Custom transition  4+char like ---- */
+/* keep grey for both #e1e4e5  and not rst  #413d3d */
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 4px solid #e1e4e5;
+	margin: 24px 0;
+	padding: 0;
+}
+
+.rst-versions .rst-other-versions hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	margin: 24px 0;
+	padding: 0;
+	border-top: 4px solid #e1e4e5;
+}
+
+/* ========================================== */
+/* Custom admonition */
+
+div.admonition-my-admonition {
+    color: blue;
+    border: 2px solid gold;
+    background-color: lightyellow!important;
+}
+
+
+div.admonition-my-admonition p.admonition-title {
+    text-transform: capitalize;
+    color: black!important;
+    background-color: gold!important;
+}
+
 
 /* ========================================== */
 /* Hide "On GitHub" section from versions menu */
