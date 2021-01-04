@@ -3,7 +3,6 @@
 
 # -- Project information -----------------------------------------------------
 
-
 import sphinx_rtd_theme
 project = 'PC-Using-RTD'
 copyright = '2020-1, GMC'
@@ -16,8 +15,9 @@ author = 'GMC'
 extensions = [
     'sphinx_rtd_theme',
     'sphinx_copybutton',
+    'sphinx.ext.todo',
+    'sphinx.ext.autodoc',
 ]
-
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -37,7 +37,11 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # if using To Dos and want them to showup
-# todo_include_todos = True
+todo_include_todos = True
+
+# default python Pygments (syntax highlighting) style to use.
+# for other styles see https://pygments.org/docs/lexers/#lexers-for-python-and-related-languages
+pygments_style = 'sphinx'
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -85,29 +89,38 @@ html_logo = "_static/logo_navyblue.png"
 
 latex_engine = 'xelatex'  # pdflatex'
 latex_elements = {
-    # need to use svgcolour names for title and tip border
-    'passoptionstopackages': r'\PassOptionsToPackage{svgnames}{xcolor}',
+    # to use latex dvipsnames and svgcolour names if so desired
+    'passoptionstopackages': r'\PassOptionsToPackage{dvipsnames*,svgnames}{xcolor}',
     #
     # The paper size ('letterpaper' or 'a4paper').
-    #
     'papersize': 'a4paper',
+    #
+    # start chapter on any page, not just odd
+    'extraclassoptions': 'openany',
+    #
+    # Value that prefixes 'release' element on title page.; keep blank
     'releasename': " ",
     #
     # Sonny, Lenny, Glenn, Conny, Rejne, Bjarne and Bjornstrup
     # 'fncychap': '\\usepackage[Rejne]{fncychap}',
     # 'fncychap': '\\usepackage{fncychap}',
     #
+    # font packages for maths display incase needed
     'fontpkg': '\\usepackage{amsmath,amsfonts,amssymb,amsthm}',
     #
     # The font size ('10pt', '11pt' or '12pt').
     'pointsize': '12pt',
     #
+    # standard figure options
     'figure_align': 'htbp',
     #
     'tableofcontents': ' ',
+    #
+    # custom \\hrule replacement to match css for html hr
     'transition': '\n\n\\vspace{24pt} {\\color{Gainsboro} \\rule{\\linewidth}{4pt} } \\bigskip\n\n '
     #
 }
+
 
 latex_elements['preamble'] = r'''
     %%% preamble
@@ -192,19 +205,9 @@ latex_elements['maketitle'] = r'''
 
     '''
 
-
-# Latex figure (float) alignment
-#
-# 'figure_align': 'htbp',
-
+# latex_elements['sphinxsetup'] expt codes
 # Latex colours named see: https://www.latextemplates.com/svgnames-colors
 # sphinx latex see https://www.sphinx-doc.org/en/master/latex.html
-# cautionborder = 3pt,
-# cautionBgColor = {named}{LightCyan}}
-# \usepackage{titlesec}
-# \titleformat{\section}[block]{Large \filcenter}{}{1em}{} %\sffamily
-# \titleformat{\subsection}[hang]{\filright \itshape}{}{1em}{}
-# %\titleformat{\chapter}[hang]{\filright \bfseries}{}{1em}{}
 # InnerLinkColor default {rgb}{0.208, 0.374, 0.486}. linkcolor and citecolor.
 # OuterLinkColor default {rgb}{0.216, 0.439, 0.388}. filecolor, menucolor, and urlcolor.
 # TitleColor default {rgb}{0.126, 0.263, 0.361}. titles(as configured via use of package “titlesec”.)
@@ -214,7 +217,7 @@ latex_elements['maketitle'] = r'''
 latex_elements['sphinxsetup'] = '''
     hmargin={0.7in,0.7in}, vmargin={0.7in,0.7in}, \
     verbatimwithframe=true, \
-    verbatimsep = 12pt, \
+    verbatimsep = 1pt, \
     verbatimborder = 1.0pt, \
     VerbatimColor = {named}{white}, \
     VerbatimBorderColor = {named}{LightGrey}, \
@@ -253,6 +256,7 @@ latex_logo = '_static/logo_navyblue.png'
 # sectioning defaults to chapter when using manual
 latex_toplevel_sectioning = 'chapter'
 
+# for manual can use report
 latex_documents = [
     (master_doc, 'PC-USING-RTD.tex', 'PC-USING-RTD',
      'GMC', 'manual'),
