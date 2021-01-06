@@ -86,7 +86,7 @@ See more: https://docs.microsoft.com/en-us/learn/modules/introduction-to-github-
 Recommended youtube: 
 https://www.youtube.com/watch?v=3Tn58KQvWtU&list=PLpPVLI0A0OkLBWbcctmGxxF6VHWSQw1hi
 
-
+https://www.youtube.com/watch?v=ghL-KlAhBnc uses the command palette in VSCode more.
 
 VSCode Git staging and commits
 ------------------------------------------------------------
