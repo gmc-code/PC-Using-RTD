@@ -41,7 +41,7 @@ todo_include_todos = True
 
 # default python Pygments (syntax highlighting) style to use.
 # for other styles see https://pygments.org/docs/lexers/#lexers-for-python-and-related-languages
-# pygments_style = 'sphinx'
+pygments_style = 'sphinx'
 
 # -- Options for HTML output -------------------------------------------------
 # see https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
