@@ -41,9 +41,10 @@ todo_include_todos = True
 
 # default python Pygments (syntax highlighting) style to use.
 # for other styles see https://pygments.org/docs/lexers/#lexers-for-python-and-related-languages
-pygments_style = 'sphinx'
+# pygments_style = 'sphinx'
 
 # -- Options for HTML output -------------------------------------------------
+# see https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # The theme to use for HTML and HTML Help pages.
 # See the documentation for a list of builtin themes.
@@ -61,6 +62,13 @@ html_css_files = ['css/custom.css']
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# If true, add an index to the HTML documents. Default is True.
+html_use_index = False
+
+# If true, generate domain-specific indices in addition to the general index. For e.g. the Python domain, this is the global module index. Default is True.
+# This value can be a bool or a list of index names that should be generated. To find out the index name for a specific index, look at the HTML file name. For example, the Python module index has the name 'py-modindex'.
+html_domain_indices = False
 
 # -- sphinx-rtd-theme Theme Options ------------------------------------------
 # See: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
@@ -85,9 +93,38 @@ html_logo = "_static/logo_navyblue.png"
 
 
 # -- Options for LaTeX output ------------------------------------------------
-# see https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html for latex code
+# see # https://www.sphinx-doc.org/en/master/usage/configuration.html#latex-options
+# see https://sphinxguide.readthedocs.io/en/latest/sphinx_basics/settings.html for example latex code
 
+# xelatex is better than pdflatex for unicode
 latex_engine = 'xelatex'  # pdflatex'
+
+# latex_documents determines how to group the document tree into LaTeX source files  # list of tuples: (startdocname, targetname, title, author, theme, toctree_only)
+# Tuples with 5 items are still accepted.
+# theme -- for manual can use 'report'
+latex_documents = [
+    (master_doc, 'PC-Using-RTD.tex', 'PC-Using-RTD',
+     'GMC', 'manual'),
+]
+
+# logo of the docs. It is placed at the top of the title page. Default: None.
+latex_logo = '_static/logo_navyblue.png'
+
+# sectioning defaults to chapter when using manual
+latex_toplevel_sectioning = 'chapter'
+
+# latex_domain_indices = true, generate domain-specific indices in addition to the general index. For e.g. the Python domain, this is the global module index. Default is True. This value can be a bool or a list of index names that should be generated, like for html_domain_indices.
+# don't make indices unless definitely wanted
+# latex_domain_indices = False
+
+# A LaTeX theme for writing a manual. It imports the report document class
+latex_theme = 'manual'
+
+# -- latex_elements ------------------------------------------------
+# see: https://www.sphinx-doc.org/en/master/latex.html
+# Keep in mind that backslashes must be doubled in Python string literals to avoid interpretation as escape sequences. Alternatively, you may use raw strings
+
+
 latex_elements = {
     # to use latex dvipsnames and svgcolour names if so desired
     'passoptionstopackages': r'\PassOptionsToPackage{dvipsnames*,svgnames}{xcolor}',
@@ -114,13 +151,18 @@ latex_elements = {
     # standard figure options
     'figure_align': 'htbp',
     #
+    # default '\\tableofcontents'. Override to put content between the title page and the TOC.
     'tableofcontents': ' ',
+    #
+    # 'printindex' default '\\printindex'. Override to generate the index differently or append some content after the index.
+    # 'printindex': ' ',
     #
     # custom \\hrule replacement to match css for html hr
     'transition': '\n\n\\vspace{24pt} {\\color{Gainsboro} \\rule{\\linewidth}{4pt} } \\bigskip\n\n '
     #
 }
 
+# preamble is custom latex code for general pages
 
 latex_elements['preamble'] = r'''
     %%% preamble
@@ -131,8 +173,8 @@ latex_elements['preamble'] = r'''
     %%%% Table of content upto 2=subsection, 3=subsubsection
     \setcounter{tocdepth}{2}
 
-    \usepackage{amsmath,amsfonts,amssymb,amsthm}
-    \usepackage{graphicx}
+    % \usepackage{amsmath,amsfonts,amssymb,amsthm}
+    % \usepackage{graphicx}
 
     %%% reduce spaces for Table of contents, figures and tables
     %%% it is used "\addtocontents{toc}{\vskip -1.2cm}" etc. in the document
@@ -140,9 +182,12 @@ latex_elements['preamble'] = r'''
 
     \usepackage{color}
     \usepackage[dvipsnames*,svgnames]{xcolor}
-    \usepackage{transparent}
-    \usepackage{eso-pic}
-    \usepackage{lipsum}
+    % \usepackage{transparent}
+    % \usepackage{eso-pic}
+    % \usepackage{lipsum}
+    \usepackage{fontawesome5}
+    % \usepackage{tikz}
+
 
     %% spacing between line; \onehalfspacing \doublespacing
     \usepackage{setspace}
@@ -169,16 +214,15 @@ latex_elements['preamble'] = r'''
     \usepackage{enumitem}
     \setlist{nosep}
 
-    '''
+'''
 
 latex_elements['maketitle'] = r'''
     \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page 1
-
     \begin{titlepage}
         \centering
 
         \vspace*{40mm} %%% * is used to force space from top since first time is normally ignored
-        \textbf{\color{NavyBlue} \Huge {PC-USING-RTD}}
+        \textbf{\color{NavyBlue} \Huge {PC-Using-RTD}}
 
         \vspace{10mm}
         \begin{figure}[!h]
@@ -187,13 +231,13 @@ latex_elements['maketitle'] = r'''
         \end{figure}
 
         \vspace{10mm}
-        \LARGE \color{NavyBlue} {GMC}
+        \LARGE \color{NavyBlue} \underline{GMC}
 
         \vspace{10mm}
-        \large \color{NavyBlue} Created : Jan 2021
+        \large \color{NavyBlue} {Created : Jan 2021}
 
         \vspace*{-1mm}
-        \large \color{NavyBlue} Last updated : \MonthYearFormat\today
+        \large \color{NavyBlue} \textit{Last updated : \MonthYearFormat\today}
 
     \end{titlepage}
 
@@ -203,7 +247,7 @@ latex_elements['maketitle'] = r'''
     \clearpage
     \pagenumbering{arabic}
 
-    '''
+'''
 
 # latex_elements['sphinxsetup'] expt codes
 # Latex colours named see: https://www.latextemplates.com/svgnames-colors
@@ -249,15 +293,108 @@ latex_elements['sphinxsetup'] = '''
     \
     HeaderFamily=\\rmfamily\\bfseries\
 
-    '''
+'''
 
-latex_logo = '_static/logo_navyblue.png'
+# see for modifying environments: https://www.overleaf.com/learn/latex/Environments
+# # from sphinx.sty in build folder:
 
-# sectioning defaults to chapter when using manual
-latex_toplevel_sectioning = 'chapter'
+# \newenvironment{sphinxnote}[1]
+#   {\begin{sphinxlightbox}\sphinxstrong{#1} }{\end{sphinxlightbox}}
 
-# for manual can use report
-latex_documents = [
-    (master_doc, 'PC-USING-RTD.tex', 'PC-USING-RTD',
-     'GMC', 'manual'),
-]
+
+latex_custom_admonitions = r'''
+
+    \makeatletter
+        \usepackage{tcolorbox}
+        \tcbuselibrary{skins}
+        \usepackage{fontawesome5}
+
+        \definecolor{sphinxnoteBgColor}{RGB}{231, 242, 250}
+        \definecolor{sphinxnoteBorderColor}{RGB}{106, 176, 222}
+
+        \renewenvironment{sphinxnote}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxnoteBgColor, colframe=sphinxnoteBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \definecolor{sphinxhintBgColor}{RGB}{219, 250, 244}
+        \definecolor{sphinxhintBorderColor}{RGB}{26, 188, 156}
+
+        \definecolor{sphinximportantBgColor}{RGB}{219, 250, 244}
+        \definecolor{sphinximportantBorderColor}{RGB}{26, 188, 156}
+
+        \definecolor{sphinxtipBgColor}{RGB}{219, 250, 244}
+        \definecolor{sphinxtipBorderColor}{RGB}{26, 188, 156}
+
+        \renewenvironment{sphinxhint}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxhintBgColor, colframe=sphinxhintBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \renewenvironment{sphinximportant}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinximportantBgColor, colframe=sphinximportantBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \renewenvironment{sphinxtip}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxtipBgColor, colframe=sphinxtipBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \definecolor{sphinxwarningBgColor}{RGB}{255, 237, 204}
+        \definecolor{sphinxwarningBorderColor}{RGB}{240, 179, 126}
+
+        \definecolor{sphinxattentionBgColor}{RGB}{255, 237, 204}
+        \definecolor{sphinxattentionBorderColor}{RGB}{240, 179, 126}
+
+        \definecolor{sphinxcautionBgColor}{RGB}{255, 237, 204}
+        \definecolor{sphinxcautionBorderColor}{RGB}{240, 179, 126}
+
+        \renewenvironment{sphinxwarning}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxwarningBgColor, colframe=sphinxwarningBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \renewenvironment{sphinxattention}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxattentionBgColor, colframe=sphinxattentionBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \renewenvironment{sphinxcaution}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxcautionBgColor, colframe=sphinxcautionBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \definecolor{sphinxdangerBgColor}{RGB}{253, 243, 242}
+        \definecolor{sphinxdangerBorderColor}{RGB}{242, 159, 151}
+
+        \definecolor{sphinxerrorBgColor}{RGB}{253, 243, 242}
+        \definecolor{sphinxerrorBorderColor}{RGB}{242, 159, 151}
+
+        \renewenvironment{sphinxdanger}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxdangerBgColor, colframe=sphinxdangerBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+        \renewenvironment{sphinxerror}[1]
+            {\begin{tcolorbox}[arc=0mm, toprule=0mm, bottomrule=0mm, leftrule=0mm, rightrule=0mm,
+                colback=sphinxerrorBgColor, colframe=sphinxerrorBorderColor,
+                title=\faExclamationCircle \sphinxstrong{#1}]}
+            {\end{tcolorbox}}
+
+    \makeatother
+
+'''
+
+latex_elements['preamble'] += latex_custom_admonitions
+
+
+# end

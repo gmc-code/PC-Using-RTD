@@ -34,13 +34,11 @@ div.admonition-my-admonition {
     background-color: lightyellow!important;
 }
 
-
 div.admonition-my-admonition p.admonition-title {
     text-transform: capitalize;
     color: black!important;
     background-color: gold!important;
 }
-
 
 /* ========================================== */
 /* Hide "On GitHub" section from versions menu */
