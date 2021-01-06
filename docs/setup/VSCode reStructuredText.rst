@@ -95,12 +95,14 @@ View docs as html
     make clean
     make html
 
-* ``make clean`` is need first since Sphinx only rebuilds pages that have changed.
+* ``make clean`` is needed first since Sphinx only rebuilds pages that have changed.
 
 * Open the index file ``_build/html/index.html`` in a web browser to see the docs.
 * The html can also be viewed in the browser using the VSCode terminal. ::
 
     start chrome _build/html/index.html
+
+* Add the VSCode extension ``open in browser`` to add the command ``open in default browser`` to the pop up menu when right clicking the html file in VSCode explorer panel.
 
 
 View docs as html using localhost
