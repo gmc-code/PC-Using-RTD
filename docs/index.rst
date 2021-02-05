@@ -28,6 +28,7 @@ VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
    setup/VSCode.rst 
    setup/VSCode Project Folder and Sphinx.rst
    setup/VSCode reStructuredText.rst
+   setup/VSCode make html and pdf.rst
    setup/VSCode special files.rst
    setup/VSCode conf.py.rst
    setup/Git.rst
