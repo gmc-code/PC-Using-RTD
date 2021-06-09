@@ -5,7 +5,7 @@
 
 import sphinx_rtd_theme
 project = 'PC-Using-RTD'
-copyright = '2020-1, GMC'
+copyright = '2020-2, GMC'
 author = 'GMC'
 
 # -- General configuration ---------------------------------------------------
