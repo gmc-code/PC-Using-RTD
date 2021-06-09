@@ -82,6 +82,17 @@ VSCode conf.py file
 
 ----
 
+Enable Jupyter notebook Interactivity
+------------------------------------------------------------
+
+* See: https://jupyter-sphinx.readthedocs.io/en/latest/
+* Interactive cells are activated with a button click.
+* By default the button is added at the end of the document, but it may also be inserted anywhere using::
+
+    .. thebe-button:: Optional title
+
+----
+
 Usage
 ------------------------------
 
@@ -93,3 +104,5 @@ Usage
     y = 5
     ans = x * y
     print('x * y = ' + str(ans))
+
+    
