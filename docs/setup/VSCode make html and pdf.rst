@@ -4,20 +4,25 @@
 VSCode make html and pdf
 ==============================
 
-
 View docs as html
-==============================
+------------------------------
+
 There are a few different ways to view how the documentation will look before pushing it to GitHub and viewing it in RTDs.
 The first option below displays a preview of the .rst file.
 The second and third option require the use of Sphinx to build the html output.
 
+----
+
 View docs as html in VSCode
 ------------------------------
+
 * Install the ``HTML preview`` extension in VSCode, then use the Open Preview to the Side icon at the top right of the window to preview an open .rst file.
 
+----
 
 View docs as html
 ------------------------------
+
 * Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
 * eg: C:/projects/project-name/docs
@@ -36,9 +41,11 @@ View docs as html
 
 * Add the VSCode extension ``open in browser`` to add the command ``open in default browser`` to the pop up menu when right clicking the html file in VSCode explorer panel.
 
+----
 
 View docs as html using localhost
 ------------------------------------------------------------
+
 * Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
 * eg: C:/projects/project-name/docs
@@ -68,11 +75,13 @@ View docs as html using localhost
 ----
 
 View docs as pdf
-==============================
+------------------------------
+
 Make the latex build then create the pdf from the .tex file.
 
 Make latex
 ------------------------------
+
 * Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal.
 * Make sure that the terminal folder is the docs folder.
 * eg: C:/projects/project-name/docs
@@ -90,6 +99,5 @@ Make latex
 
 * Create the pdf from the .tex file. ::
 
-   xelatex PC-Using-RTD.tex
+    xelatex PC-Using-RTD.tex
 
-   

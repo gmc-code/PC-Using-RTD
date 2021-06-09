@@ -5,7 +5,8 @@ VSCode Project Folder and Sphinx
 ============================================================
 
 Create docs folder
-==============================
+------------------------------
+
 * Create a project folder with the same name that will be used in GitHub for the repository name. See :ref:`GitHub new repo`
 * Open a project folder from within VSCode.
 * Press :kbd:`ctrl` + :kbd:`shift` + :kbd:`\`` to open the VSCode terminal. 
@@ -19,8 +20,11 @@ Create docs folder
 
     cd docs
 
+----
+
 Sphinx-quickstart
-==============================
+------------------------------
+
 * For more info on Sphinx, see: https://www.sphinx-doc.org/en/master/usage/quickstart.html
 * From the VSCode terminal, run from within the docs folder: ::
 

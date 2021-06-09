@@ -1,3 +1,9 @@
+/* body background colour default #fcfcfc    #fffef2*/
+/* .wy-nav-content {
+    background: #fcfcfc;
+}
+*/
+/* ========================================== */
 /* inline literals; change colour from built in red to blue */
 
 .rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {

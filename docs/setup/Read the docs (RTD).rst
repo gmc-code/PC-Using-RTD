@@ -3,18 +3,25 @@ Read the docs (RTD)
 ==============================
 
 Sign up to RTD
-==============================
+------------------------------
+
 * Sign up or login at https://readthedocs.org/
 
+----
+
 Connect to GitHub
-==============================
+------------------------------
+
 Connect to github via settings so that all github projects are listed in RTD:
 
 * Go to https://readthedocs.org/accounts/social/connections/
 * Click connect to github
 
+----
+
 Import GitHub project
-==============================
+------------------------------
+
 * Go to https://readthedocs.org/dashboard/
 * Click: Import project
 * Click refresh to show all GitHub repositories

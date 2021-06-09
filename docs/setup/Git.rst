@@ -3,11 +3,15 @@ Git
 ==============================
 
 Install Git
-==============================
+------------------------------
+
 Download and install git version 2.0.0 (or newer) from https://git-scm.com/. Use all defaults.
 
+----
+
 Set Git Name & Email
-==============================
+------------------------------
+
 When you install Git, set your user name and email address. 
 This is important because every Git commit uses this information, 
 and it’s used in the commits you create.
@@ -23,9 +27,10 @@ From the cmd prompt, confirm your settings with: ::
 
     git config --list
 
+----
 
 Git in VSCode
-==============================
+------------------------------
 
 Visual Studio Code has git support built in.
 

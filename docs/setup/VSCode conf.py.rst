@@ -6,9 +6,11 @@ VSCode conf.py file
 
 In VSCode, edit the ``conf.py`` file in the docs folder.
 
+----
 
 sphinx_rtd_theme
-==============================
+------------------------------
+
 * Use the sphinx_rtd_theme for html display on the ReadTheDocs website.
 
 * The Project information section of ``conf.py`` should have ::
@@ -25,8 +27,11 @@ sphinx_rtd_theme
         'sphinx_rtd_theme'
     ]
 
+----
+
 sphinx-rtd-theme Theme Options 
-==============================
+------------------------------
+
 * See: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
 * Add the code below to ``conf.py`` with these suggested options: ::
 
@@ -44,20 +49,24 @@ sphinx-rtd-theme Theme Options
         'titles_only': False  # False so page subheadings are in the nav.
     }
 
+----
 
 .. _custom css:
 
 Custom css
-==============================
+------------------------------
+
 * Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom css in the ``_static/css/custom.css`` file. ::
 
     html_css_files = ['css/custom.css']
 
+----
 
 .. _custom logo:
 
 Custom logo
-==============================
+------------------------------
+
 * Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom logo in the ``_static/logo.png`` file. ::
 
     html_logo = '_static/logo.png'

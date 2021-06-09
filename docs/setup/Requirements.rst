@@ -4,7 +4,7 @@ Requirements
 
 
 Required software
-==============================
+------------------------------
 
 .. rst-class:: bignums
 
@@ -12,6 +12,8 @@ Required software
 #. Sphinx
 #. Sphinx theme for read the docs
 #. Sphinx copy button extension
+#. Optional: Jupyter notebook
+#. Optional: Sphinx jupyter-sphinx extension
 #. Visual Studio code (VSCode)
 #. Visual Studio code reStructuredText (reST) extension
 #. Git command line tool
