@@ -17,7 +17,8 @@ Install Python
 Updating python packages in requirements file
 ------------------------------------------------------------
 
-From the command line change directory, ``cd``, to the folder with the ``requirements.txt`` file and use::
+* After setting up a project, ther may be a need to update the packages required that are listed in the ``requirements.txt`` file. 
+* From the command line change directory, ``cd``, to the folder with the ``requirements.txt`` file and use::
 
     pip install --upgrade -r requirements.txt
 
