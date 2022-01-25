@@ -74,6 +74,17 @@ Run from within the main VScode folder that the docs folder is within. ::
 
 ----
 
+Initialize GitHub in VSCode starting from **an existing repository**
+-----------------------------------------------------------------------
+
+In VSCode, run from within the main VScode folder that the docs folder is within. ::
+
+    git remote add origin https://github.com/mygithubname/myrepo.git
+    git branch -M master
+    git push -u origin master
+
+----
+
 VSCode GitHub updates
 ------------------------------
 
