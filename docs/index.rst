@@ -32,7 +32,7 @@ VSCode -> reStructuredText -> Sphinx -> GitHub -> ReadTheDocs
     setup/VSCode make html and pdf.rst
     setup/VSCode special files.rst
     setup/VSCode conf.py.rst
-    setup/Git and VSCode.rst
+    setup/Git.rst
     setup/GitHub and VSCode.rst
     setup/Read the docs (RTD).rst
     setup/VSCode to GitHub to RTDs.rst
