@@ -1,0 +1,271 @@
+/* body background colour default #fcfcfc    #fffef2*/
+/* .wy-nav-content {
+    background: #fcfcfc;
+}
+*/
+/* ========================================== */
+/* inline literals; change colour from built in red to blue */
+
+.rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
+    color: #3333ff;
+    font-size: 90%!important;
+}
+/* ========================================== */
+/* Custom transition  4+char like ---- */
+/* keep grey for both #e1e4e5  and not rst  #413d3d */
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 4px solid #e1e4e5;
+	margin: 24px 0;
+	padding: 0;
+}
+
+.rst-versions .rst-other-versions hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	margin: 24px 0;
+	padding: 0;
+	border-top: 4px solid #e1e4e5;
+}
+
+/* ========================================== */
+/* Custom admonition */
+
+div.admonition-my-admonition {
+    color: blue;
+    border: 2px solid gold;
+    background-color: lightyellow!important;
+}
+
+div.admonition-my-admonition p.admonition-title {
+    text-transform: capitalize;
+    color: black!important;
+    background-color: gold!important;
+}
+
+/* ========================================== */
+/* Hide "On GitHub" section from versions menu */
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
+    display: none;
+}
+/* Hide "versions" section from versions menu */
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) {
+    display: none;
+}
+/* Hide "On Read the Docs" section from versions menu */
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(3) {
+    display: none;
+}
+/* ========================================== */
+/* kbd role for keyboard shortcuts */
+
+.rst-content kbd {
+    -moz-border-radius:3px;
+    -moz-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    -webkit-border-radius:3px;
+    -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    background-color:#f7f7f7;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    color:#333;
+    display:inline-block;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    line-height:1.6;
+    margin:0 .1em;
+    padding:.1em .6em;
+    text-shadow:0 1px 0 #fff;
+}
+
+/* ========================================== */
+/* Copy buttons for sphinx-copybutton extension */
+
+a.copybtn {
+    position: absolute;
+    top: .2em;
+    right: .2em;
+    width: 1.3em;
+    height: 1.3em;
+	opacity: .3;
+    transition: opacity 0.5s;
+    border: none;
+    user-select: none;
+}
+
+div.highlight  {
+    position: relative;
+}
+
+a.copybtn > img {
+    vertical-align: top;
+    margin: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.highlight:hover .copybtn {
+	opacity: 1;
+}
+
+/**
+ * A minimal CSS-only tooltip copied from:
+ *   https://codepen.io/mildrenben/pen/rVBrpK
+ * To use, write HTML like the following:
+ * <p class="o-tooltip--left" data-tooltip="Hey">Short</p>
+ */
+ .o-tooltip--left {
+  position: relative;
+ }
+
+ .o-tooltip--left:after {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    content: attr(data-tooltip);
+    padding: 2px;
+    top: 0;
+    left: -.2em;
+    background: grey;
+    font-size: 1rem;
+    color: white;
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 2px;
+    transform: translateX(-102%) translateY(0);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+.o-tooltip--left:hover:after {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-100%) translateY(0);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition-delay: .5s;
+}
+
+/*==================xxl=====================*/
+/* Allow some numbered lists to appear as very emphasized steps in a procedure */
+.rst-content ol.bignums-xxl {
+    counter-reset: li-counter;
+}
+.rst-content ol.bignums-xxl>li { /* Represents a single list element */
+    list-style-type: none;
+    margin: 42px 0;  /* A bit more space above and below each list element */
+    padding: 12px 12px 12px 70px;  /* A bit more space between number and its text */
+    position: relative;
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 6px solid #ddd;
+}
+.rst-content ol.bignums-xxl>li>p { /* Represents a single list element */
+    font-weight: bold;
+}
+.rst-content ol.bignums-xxl>li>p.first { /* Formats the text of a single list element */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    line-height: 36px;
+}
+.rst-content ol.bignums-xxl>li::before { /* Creates the format for the bullet point */
+    background-color: #fff;
+    color: #333;
+    border: 5px solid #ddd;
+    border-radius: 35%;
+    content: counter(li-counter,  decimal);
+    counter-increment: li-counter;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 36px;
+    margin: 6px 24px 0 0;
+    padding-top: 4px;
+    position: absolute;
+    text-align: center;
+    left: 2.4px;
+    top: 7.2px;
+    width: 52px;
+    height: 52px;
+}
+
+/*==================xl=====================*/
+/* Allow some numbered lists to appear as very emphasized steps in a procedure */
+.rst-content ol.bignums-xl {
+    counter-reset: li-counter;
+}
+.rst-content ol.bignums-xl>li { /* Represents a single list element */
+    list-style-type: none;
+    margin: 2px 0;  /* A bit more space above and below each list element */
+    padding: 15px 10px 10px 44px;  /* A bit more space between number and its text */
+    position: relative;
+    background-color: transparent;  /* Background of the entire bullet + text */
+}
+.rst-content ol.bignums-xl>li>p { /* Represents a single list element */
+    font-weight: bold;
+}
+.rst-content ol.bignums-xl>li>p.first { /* Formats the text of a single list element */
+    font-size: 24px;
+    margin-top: 0;
+    line-height: 36px;
+}
+.rst-content ol.bignums-xl>li::before { /* Creates the format for the bullet point */
+    border: 5px solid #ccc;  /* Properties of the circle around the bullet number */
+    background-color: #fff;
+    color: #111;
+    border-radius: 30%; /* How tight the circle is: 65%=circle, %45% = box with big rounded corners */
+    content: counter(li-counter,  decimal);
+    counter-increment: li-counter;
+    font-size: 20px;
+    line-height: 23px;  /* Height of the bullet number line (functions as padding-top) */
+    margin: 1px 12px 0 0;  /* Margin around the bullet number/circle */
+    padding-top: 3px;  /* Padding between the bullet number and bullet circle */
+    position: absolute;
+    text-align: center;
+    left: 2px;  /* The offsets of the entire circle/number bullet */
+    top: 5px;
+    width: 34px;  /* The width of the bullet circle */
+    height: 35px;  /* The height of the bullet circle */
+}
+
+/*=======================================*/
+/* Allow some numbered lists to appear as very emphasized steps in a procedure */
+.rst-content ol.bignums {
+    counter-reset: li-counter;
+}
+.rst-content ol.bignums>li { /* Represents a single list element */
+    list-style-type: none;
+    margin: 2px 0;  /* A bit more space above and below each list element */
+    padding: 15px 10px 10px 58px;  /* A bit more space between number and its text */
+    position: relative;
+    background-color: transparent;  /* Background of the entire bullet + text */
+}
+.rst-content ol.bignums>li>p { /* Represents a single list element */
+    font-weight: bold;
+}
+.rst-content ol.bignums>li>p.first { /* Formats the text of a single list element */
+    font-size: 24px;
+    margin-top: 0;
+    line-height: 36px;
+}
+.rst-content ol.bignums>li::before { /* Creates the format for the bullet point */
+    position: absolute;
+    left: 2.4px;  /* The offsets of the entire circle/number bullet */
+    top: 10px;
+    width: 35px;  /* The width of the bullet circle */
+    height: 36px;  /* The height of the bullet circle */
+    margin: 1px 12px;  /* Margin around the bullet number/circle */
+    padding-top: 3px;  /* Padding between the bullet number and bullet circle */
+    font-size: 20px;
+    line-height: 28px;  /* Height of the bullet number line (functions as padding-top) */
+    text-align: center;
+    background-color: #313131;
+    color: #fff;
+    border-radius: 50%;
+    content: counter(li-counter, decimal);
+    counter-increment: li-counter;
+    font-weight: 600;
+}
