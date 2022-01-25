@@ -7,7 +7,7 @@ Git
 | Git is a command line tool that can be integrated into other software such as VSCode.
 | GitHub hosts repositories and it deeply integrated with Git.
 | See: https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
-
+| See: https://marklodato.github.io/visual-git-guide/index-en.html
 
 ----
 
