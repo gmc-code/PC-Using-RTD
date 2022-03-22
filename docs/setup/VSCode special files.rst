@@ -38,9 +38,9 @@ docs/requirements.txt
 * See: https://docs.readthedocs.io/en/stable/guides/specifying-dependencies.html
 * Use this text in the requirements file with the version numbers you are using: ::
 
-    sphinx==4.3.1
+    sphinx==4.4.0
     sphinx_rtd_theme==1.0.0
-    sphinx-copybutton==0.4.0
+    sphinx-copybutton==0.5.0
 
 * To update using the requirements file ::
 
