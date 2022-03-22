@@ -41,6 +41,7 @@ docs/requirements.txt
     sphinx==4.4.0
     sphinx_rtd_theme==1.0.0
     sphinx-copybutton==0.5.0
+    docutils<0.18  # must be between 0.14 and <0.18 for sphinx
 
 * To update using the requirements file ::
 
@@ -52,6 +53,7 @@ docs/requirements.txt
     pip show sphinx
     pip show sphinx_rtd_theme
     pip show sphinx-copybutton
+    pip show docutils
 
 * To get all the installed version numbers, check the output from typing in the VSCode terminal: ::
 
