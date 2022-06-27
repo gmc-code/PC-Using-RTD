@@ -14,6 +14,28 @@ Install Python
 
 ----
 
+Virtual environment
+---------------------
+
+| See: https://www.youtube.com/watch?v=APOPm01BVrk
+| Create  a virtual environment for the packages needed for read the docs.
+
+| If there are different version of python installed use the full path to the version requried to cereate teh virtual environment.
+| e.g. "C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe"
+| e.g. "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe"
+
+
+| Create  a virtual environment::
+
+    "C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe" -m venv rtd_venv39
+
+| Activate the virtual environment::
+    
+       "C:\Users\username\rtd_venv39\Scripts\activate.bat"
+
+
+----
+
 Updating python packages in requirements file
 ------------------------------------------------------------
 

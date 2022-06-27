@@ -47,11 +47,7 @@ div.admonition-my-admonition p.admonition-title {
 }
 
 /* ========================================== */
-
-/* Hide "rest" section from versions menu */
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(6) {
-    display: none;
-}/* Hide "Search" section from versions menu */
+/* Hide "Search" section from versions menu */
 div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(5) {
     display: none;
 }
