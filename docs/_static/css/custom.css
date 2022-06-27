@@ -59,6 +59,10 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) {
 div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(3) {
     display: none;
 }
+/* Hide "Search" section from versions menu */
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
+    display: none;
+}
 /* ========================================== */
 /* kbd role for keyboard shortcuts */
 
