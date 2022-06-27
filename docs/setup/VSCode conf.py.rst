@@ -13,15 +13,21 @@ sphinx_rtd_theme
 
 * Use the sphinx_rtd_theme for html display on the ReadTheDocs website.
 
-* The Project information section of ``conf.py`` should have ::
+* The Project information section of ``conf.py`` should have
+
+.. code-block::
     
     import sphinx_rtd_theme
 
-* Change ``html_theme = 'alabaster'`` to ``html_theme = 'sphinx_rtd_theme'`` ::
+* Change ``html_theme = 'alabaster'`` to ``html_theme = 'sphinx_rtd_theme'``
+
+.. code-block::
 
     html_theme = 'sphinx_rtd_theme'
 
-* Add ``'sphinx_rtd_theme'`` to the extensions list: ::
+* Add ``'sphinx_rtd_theme'`` to the extensions list:
+
+.. code-block::
 
     extensions = [
         'sphinx_rtd_theme'
@@ -33,7 +39,9 @@ sphinx-rtd-theme Theme Options
 ------------------------------
 
 * See: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
-* Add the code below to ``conf.py`` with these suggested options: ::
+* Add the code below to ``conf.py`` with these suggested options:
+
+.. code-block::
 
     html_theme_options = {
         'logo_only': False,
@@ -56,7 +64,9 @@ sphinx-rtd-theme Theme Options
 Custom css
 ------------------------------
 
-* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom css in the ``_static/css/custom.css`` file. ::
+* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom css in the ``_static/css/custom.css`` file.
+
+.. code-block::
 
     html_css_files = ['css/custom.css']
 
@@ -67,11 +77,15 @@ Custom css
 Custom logo
 ------------------------------
 
-* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom logo in the ``_static/logo.png`` file. ::
+* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom logo in the ``_static/logo.png`` file.
+
+.. code-block::
 
     html_logo = '_static/logo.png'
 
-* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom favicon in the ``_static/favicon.ico`` file. ::
+* Add the code below to the ``Options for HTML output`` section of ``conf.py`` to use the custom favicon in the ``_static/favicon.ico`` file.
+
+.. code-block::
 
     html_favicon = "_static/favicon.ico"
 

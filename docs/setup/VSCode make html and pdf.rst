@@ -27,7 +27,9 @@ View docs as html
 * Make sure that the terminal folder is the docs folder.
 * eg: C:/projects/project-name/docs
 
-* Build an html version of the docs. ::
+* Build an html version of the docs.
+
+.. code-block::
 
     make clean
     make html
@@ -35,7 +37,9 @@ View docs as html
 * ``make clean`` is needed first since Sphinx only rebuilds pages that have changed.
 
 * Open the index file ``_build/html/index.html`` in a web browser to see the docs.
-* The html can also be viewed in the browser using the VSCode terminal. ::
+* The html can also be viewed in the browser using the VSCode terminal.
+
+.. code-block::
 
     start chrome _build/html/index.html
 
@@ -50,24 +54,32 @@ View docs as html using localhost
 * Make sure that the terminal folder is the docs folder.
 * eg: C:/projects/project-name/docs
 
-* Build an html version of the docs using the the VSCode terminal. ::
+* Build an html version of the docs using the the VSCode terminal.
+
+.. code-block::
 
     make clean
     make html
 
-* Create a local server using the the VSCode terminal. ::
+* Create a local server using the the VSCode terminal.
+
+.. code-block::
 
     python -m http.server
 
 
 * Open the localhost in the browser: http://localhost:8000/_build/html/
-* The html can also be viewed in the browser using the the VSCode terminal. ::
+* The html can also be viewed in the browser using the the VSCode terminal.
+
+.. code-block::
     
     start chrome http://localhost:8000/_build/html/
 
 
 .. tip::
-    Sometimes ``.\`` will be needed with ``make`` ::
+    Sometimes ``.\`` will be needed with ``make``
+
+.. code-block::
 
         .\make clean
         .\make html
@@ -86,18 +98,24 @@ Make latex
 * Make sure that the terminal folder is the docs folder.
 * eg: C:/projects/project-name/docs
 
-* Build a latex version of the docs. ::
+* Build a latex version of the docs.
+
+.. code-block::
 
     make clean
     make latex
 
 
-* Change directory to ``_build/latex`` ::
+* Change directory to ``_build/latex``
+
+.. code-block::
 
     cd _build\latex
 
 
-* Create the pdf from the .tex file. ::
+* Create the pdf from the .tex file.
+
+.. code-block::
 
     xelatex PC-Using-RTD.tex
 

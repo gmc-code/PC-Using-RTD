@@ -34,8 +34,10 @@ Documentation as .rst files
 
 .. tip::
 
-    .rst files must contain a fully underlined heading to work properly::
+    .rst files must contain a fully underlined heading to work properly
 
+    .. code-block::
+    
         Heading
         =======
 
@@ -60,11 +62,15 @@ Sample code
 ------------------------------
 
 * Python code blocks can be set out like the example below using the directive ``.. code-block:: python``.
-* Python line numbers can be included using the ``:linenos:`` option::
+* Python line numbers can be included using the ``:linenos:`` option.
+
+
+
+.. code-block::
 
     .. code-block:: python
         :linenos:
-    
+
         from microbit import *
 
         x = 0
@@ -74,14 +80,14 @@ Sample code
 
 | This displays as:
 
-    .. code-block:: python
-        :linenos:
+.. code-block:: python
+    :linenos:
 
-        from microbit import *
+    from microbit import *
 
-        x = 0
-        for y in range(0, 5):
-            display.set_pixel(x, y, 9)
+    x = 0
+    for y in range(0, 5):
+        display.set_pixel(x, y, 9)
 
 
 

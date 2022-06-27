@@ -25,7 +25,9 @@ From the terminal in VSCode or from the command prompt, check the version of Git
 
 Press :kbd:`Win` + :kbd:`X` + :kbd:`C` to open the Command prompt. 
 
-From the cmd prompt: ::
+From the cmd prompt:
+
+.. code-block::
 
     git --version
 
@@ -40,12 +42,16 @@ and it's used in the commits you create.
 
 Press :kbd:`Win` + :kbd:`X` + :kbd:`C` to open the Command prompt. 
 
-From the cmd prompt: ::
+From the cmd prompt:
+
+.. code-block::
 
     git config --global user.name "my-github-name"
     git config --global user.email "my-github-email-@address"
 
-From the cmd prompt, check or confirm your settings with: ::
+From the cmd prompt, check or confirm your settings with:
+
+.. code-block::
 
     git config --list
 

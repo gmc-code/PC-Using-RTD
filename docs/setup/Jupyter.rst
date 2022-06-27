@@ -11,8 +11,10 @@ It is possible to use Jupyter in Sphinx files. Jupyter-sphinx is a Sphinx extens
 docs/requirements.txt
 ------------------------------
 
-* Add this text in the requirements file ``docs/requirements.txt``::
+* Add this text in the requirements file ``docs/requirements.txt``:
 
+.. code-block::
+    
     notebook==6.4.7
     jupyter-sphinx==0.3.2
 
@@ -23,19 +25,27 @@ Install the jupyter notebook
 
 * See https://pypi.org/project/notebook/
 
-* Check the version of jupyter notebook already installed from the command line::
+* Check the version of jupyter notebook already installed from the command line.
+
+.. code-block::
 
     pip show notebook
 
-* Install the jupyter notebook from the command line::
+* Install the jupyter notebook from the command line.
+
+.. code-block::
 
     pip install notebook
 
-* Update to the latest version of the jupyter notebook from the command line::
+* Update to the latest version of the jupyter notebook from the command line.
+
+.. code-block::
 
     pip install notebook --upgrade
 
-* To install a specific version, type the package name followed by the required version::
+* To install a specific version, type the package name followed by the required version.
+
+.. code-block::
 
     pip install notebook==6.4.2
 
@@ -46,7 +56,9 @@ Install the jupyter-sphinx extension
 
 * See: https://jupyter-sphinx.readthedocs.io/en/latest/
 
-* Install the jupyter-sphinx extension from the command line::
+* Install the jupyter-sphinx extension from the command line.
+
+.. code-block::
 
     pip install jupyter-sphinx
     
@@ -55,23 +67,29 @@ Install the jupyter-sphinx extension
 VSCode conf.py file
 ------------------------------
 
-* Add this text in to the file: ``docs/conf.py``::
+* Add this text in to the file: ``docs/conf.py``.
 
-    import os
+.. code-block::
+
+     import os
     import sys
     sys.path.insert(0, os.path.abspath('../../'))
     package_path = os.path.abspath('../..')
     os.environ['PYTHONPATH'] = ':'.join((package_path, os.environ.get('PYTHONPATH', '')))
 
 
-* Edit the extensions to add ``jupyter_sphinx`` in the file: ``docs/conf.py``::
+* Edit the extensions to add ``jupyter_sphinx`` in the file: ``docs/conf.py``.
+
+.. code-block::
 
     extensions = [
         'jupyter_sphinx',
     ]
 
 
-* To enable interactive cells, add this text in to the file: ``docs/conf.py``::
+* To enable interactive cells, add this text in to the file: ``docs/conf.py``.
+
+.. code-block::
 
     jupyter_sphinx_thebelab_config = {
         'requestKernel': True,
@@ -87,7 +105,9 @@ Enable Jupyter notebook Interactivity
 
 * See: https://jupyter-sphinx.readthedocs.io/en/latest/
 * Interactive cells are activated with a button click.
-* By default the button is added at the end of the document, but it may also be inserted anywhere using::
+* By default the button is added at the end of the document, but it may also be inserted anywhere using
+
+.. code-block::
 
     .. thebe-button:: Optional title
 
@@ -96,7 +116,9 @@ Enable Jupyter notebook Interactivity
 Usage
 ------------------------------
 
-* Use the jupyter-execute directive to embed code into the document::
+* Use the jupyter-execute directive to embed code into the document.
+
+.. code-block::
 
     .. jupyter-execute::
 

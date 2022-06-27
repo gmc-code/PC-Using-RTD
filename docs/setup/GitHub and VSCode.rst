@@ -24,7 +24,9 @@ VSCode starting from **creating a new empty repository**
 * See :ref:`VSCode Project Folder and Sphinx`
 * e.g. https://github.com/mygithubname/myrepo
 * Do not create a readme file at this time.
-* Copy the "create a new repository on the command line" code for use later. ::
+* Copy the "create a new repository on the command line" code for use later.
+
+.. code-block::
 
     echo "# myrepo" >> README.md
     git init
@@ -58,7 +60,9 @@ Manually, step by step:
 
 
 Alternatively, hook up remote branch in the VSCode terminal. 
-Run from within the main VScode folder that the docs folder is within. ::
+Run from within the main VScode folder that the docs folder is within.
+
+.. code-block::
 
     echo "<# myrepo>" >> README.md
     git init
@@ -77,7 +81,9 @@ Run from within the main VScode folder that the docs folder is within. ::
 Initialize GitHub in VSCode starting from **an existing repository**
 -----------------------------------------------------------------------
 
-In VSCode, run from within the main VScode folder that the docs folder is within. ::
+In VSCode, run from within the main VScode folder that the docs folder is within.
+
+.. code-block::
 
     git remote add origin https://github.com/mygithubname/myrepo.git
     git branch -M master
@@ -120,6 +126,7 @@ VSCode Git staging and commits
 * ``U`` stands for untracked (new files not yet added to staging area). 
 * ``M`` stands for modified.
 * ``D`` stands for delete (which can result from a name change to a file).
+  
 ----
 
 Changes and Staged Changes

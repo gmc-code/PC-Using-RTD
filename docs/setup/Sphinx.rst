@@ -8,8 +8,10 @@ Sphinx is a documentation generator. This means that it takes a bunch of source 
 All pip installed versions
 -----------------------------
 
-* Check the installed version of sphinx, sphinx_rtd_theme and sphinx-copybutton with::
+* Check the installed version of sphinx, sphinx_rtd_theme and sphinx-copybutton with:
 
+.. code-block::
+    
     pip list
 
 
@@ -17,21 +19,27 @@ Install Sphinx
 ------------------------------
 
 * Press :kbd:`Win` + :kbd:`X` + :kbd:`C` to open the Command prompt. 
-* From the cmd prompt install the Sphinx library (v5.0.2 at Jul 2022)::
+* From the cmd prompt install the Sphinx library.
 
+.. code-block::
+    
     pip install sphinx
 
 
-* To upgrade include the ``-U`` flag::
+* To upgrade include the ``-U`` flag.
 
+.. code-block::
+    
     pip install -U sphinx
 
 
 
 * See https://pypi.org/project/Sphinx/
 
-* Check the installed version with::
+* Check the installed version with:
 
+.. code-block::
+    
     sphinx-build --version
 
 ----
@@ -40,12 +48,16 @@ Install the Sphinx theme for Read the Docs
 ------------------------------------------------------------
 
 * The sphinx_rtd_theme is used by other RTD guides, so it is best to use for consistency of look and feel.
-* From the cmd prompt install the Sphinx theme for read the docs::
+* From the cmd prompt install the Sphinx theme for read the docs.
 
+.. code-block::
+    
     pip install sphinx_rtd_theme
 
-* To upgrade include the ``-U`` flag::
+* To upgrade include the ``-U`` flag.
 
+.. code-block::
+    
     pip install -U sphinx_rtd_theme
 
 
@@ -58,12 +70,16 @@ Install the sphinx-copybutton Extension
 ------------------------------------------------------------
 
 * The sphinx-copybutton Extension adds a copy button to code blocks.
-* From the cmd prompt install the Sphinx Extension: sphinx-copybutton::
+* From the cmd prompt install the Sphinx Extension: sphinx-copybutton:
 
+.. code-block::
+    
     pip install sphinx-copybutton
 
-* To upgrade include the ``-U`` flag::
+* To upgrade include the ``-U`` flag:
 
+.. code-block::
+    
     pip install -U sphinx-copybutton
 
 
