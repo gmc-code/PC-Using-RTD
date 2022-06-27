@@ -30,13 +30,17 @@ Virtual environment
     "C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe" -m venv rtd_venv39
 
 | Activate the virtual environment::
-    
+
        "C:\Users\username\rtd_venv39\Scripts\activate.bat"
 
+| Install requirements using full path to a requirements file placed in the virtual environment.::
+
+    pip install -r "C:\Users\username\rtd_venv39\requirements.txt"
 
 ----
 
-Updating python packages in requirements file
+
+Updating python packages in a requirements file
 ------------------------------------------------------------
 
 * After setting up a project, there may be a need to update the packages required that are listed in the ``requirements.txt`` file. 

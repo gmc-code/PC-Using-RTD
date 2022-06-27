@@ -17,7 +17,7 @@ Install Sphinx
 ------------------------------
 
 * Press :kbd:`Win` + :kbd:`X` + :kbd:`C` to open the Command prompt. 
-* From the cmd prompt install the Sphinx library (v4.1.2 at Aug 2021)::
+* From the cmd prompt install the Sphinx library (v5.0.2 at Jul 2022)::
 
     pip install sphinx
 
@@ -40,7 +40,7 @@ Install the Sphinx theme for Read the Docs
 ------------------------------------------------------------
 
 * The sphinx_rtd_theme is used by other RTD guides, so it is best to use for consistency of look and feel.
-* From the cmd prompt install the Sphinx theme (v0.5.2 at Aug 2021) for read the docs::
+* From the cmd prompt install the Sphinx theme for read the docs::
 
     pip install sphinx_rtd_theme
 
@@ -58,7 +58,7 @@ Install the sphinx-copybutton Extension
 ------------------------------------------------------------
 
 * The sphinx-copybutton Extension adds a copy button to code blocks.
-* From the cmd prompt install the Sphinx Extension: sphinx-copybutton (v0.4.0 at Aug 2021)::
+* From the cmd prompt install the Sphinx Extension: sphinx-copybutton::
 
     pip install sphinx-copybutton
 
