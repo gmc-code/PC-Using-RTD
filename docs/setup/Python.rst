@@ -23,12 +23,19 @@ Virtual environment
 | Rather than installing the python packages, needed for sphinx and read the docs, in the system wide installation of python, a virtual environment can be created that only has these modules.
 | Virtual environments allow easy maintenance of the libraries needed for the project and avoid issues that can happen when multiple dependencies conflict across multiple projects.
 | Create  a virtual environment for the packages needed for read the docs.
+| By default, these will be created in the users directory: "C:\Users\username\".
+| In examples below, teh virtual environment folder will be called: rtd_venv310.
 
-| If there are different version of python installed use the full path to the version requried to create the virtual environment.
+| If there are different version of python installed use the full path to the version required to create the virtual environment.
 | e.g. "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe"
 
+| Create a virtual environment with the default system python:
 
-| Create  a virtual environment:
+.. code-block::
+
+    python -m venv rtd_venv310
+
+| Or, create  a virtual environment using a specific installed version of python:
 
 .. code-block::
 
@@ -40,6 +47,21 @@ Virtual environment
     
     "C:\Users\username\rtd_venv310\Scripts\activate.bat"
 
+| PLace a file, called ``readthedocs_requirements.txt``, into the virtual environment folder.
+| Into the file, place the text below, containing the suggested python modules for working with sphinx.
+
+.. code-block::
+    
+    sphinx==4.5.0 # current is sphinx==5.0.2
+    sphinx_rtd_theme==1.0.0
+    sphinx-copybutton==0.5.0
+    docutils<0.18  # must be between 0.14 and <0.18 for sphinx
+    notebook==6.4.12
+    jupyter-sphinx==0.4.0
+    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
+    rstcheck
+    esbonio
+  
 | Install requirements using the full path to a readthedocs_requirements.txt file placed in the virtual environment:
 
 .. code-block::
@@ -47,17 +69,7 @@ Virtual environment
     pip install -r "C:\Users\username\rtd_venv310\readthedocs_requirements.txt"
 
 
-| Suggested python modules to install in the virtual environment for working with sphinx:
 
-    * sphinx==4.5.0 # current is sphinx==5.0.2
-    * sphinx_rtd_theme==1.0.0
-    * sphinx-copybutton==0.5.0
-    * docutils<0.18  # must be between 0.14 and <0.18 for sphinx
-    * notebook==6.4.12
-    * jupyter-sphinx==0.4.0
-    * sphinx-thebe==0.1.2 # requires sphinx==4.5.0
-    * rstcheck
-    * esbonio
 
 ----
 
