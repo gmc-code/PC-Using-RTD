@@ -20,32 +20,31 @@ Virtual environment
 ---------------------
 
 | See: https://www.youtube.com/watch?v=APOPm01BVrk
+| Rather than installing the python packages, needed for sphinx and read the docs, in the system wide installation of python, a virtual environment can be created that only has these modules.
+| Virtual environments allow easy maintenance of the libraries needed for the project and avoid issues that can happen when multiple dependencies conflict across multiple projects.
 | Create  a virtual environment for the packages needed for read the docs.
 
-| If there are different version of python installed use the full path to the version requried to cereate the virtual environment.
-| e.g. "C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe"
+| If there are different version of python installed use the full path to the version requried to create the virtual environment.
 | e.g. "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe"
 
 
-| Create  a virtual environment.
+| Create  a virtual environment:
 
 .. code-block::
 
-    "C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe" -m venv rtd_venv39
-    or
     "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe" -m venv rtd_venv310
 
-| Activate the virtual environment
+| Activate the virtual environment:
 
 .. code-block::
     
-    "C:\Users\username\rtd_venv39\Scripts\activate.bat"
+    "C:\Users\username\rtd_venv310\Scripts\activate.bat"
 
-| Install requirements using the full path to a requirements file placed in the virtual environment
+| Install requirements using the full path to a readthedocs_requirements.txt file placed in the virtual environment:
 
 .. code-block::
     
-    pip install -r "C:\Users\username\rtd_venv39\requirements.txt"
+    pip install -r "C:\Users\username\rtd_venv310\readthedocs_requirements.txt"
 
 
 | Suggested python modules to install in the virtual environment for working with sphinx:
@@ -79,6 +78,38 @@ Updating python packages in a requirements file
     cd docs
     pip install --upgrade -r requirements.txt
 
+* To update using the requirements file
+
+.. code-block::
+
+    pip install -U -r requirements.txt
+
+
+* To check the installed version numbers, check the output from typing in the VSCode terminal:
+
+.. code-block::
+
+    pip show sphinx
+    pip show sphinx_rtd_theme
+    pip show sphinx-copybutton
+    pip show docutils
+
+* To get all the installed version numbers, check the output from typing in the VSCode terminal:
+
+.. code-block::
+
+    pip list
+
+* To see if there are updates available, check the output from typing in the VSCode terminal:
+
+.. code-block::
+
+    pip list -o
+
+* For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
+
+* For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
+
 ----
 
 Updating python packages
@@ -92,4 +123,15 @@ Updating python packages
     
     pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}
 
+----
+
+Uninstalling all python packages
+----------------------------------
+
+| This is not recommended, but is here for reference purposes. 
+| To remove all installed python packages, leaving just the built in modules, from the command line:
+
+.. code-block::
+
+    pip freeze | xargs pip uninstall -y
 

@@ -40,7 +40,7 @@ Add files
 docs/requirements.txt
 ------------------------------
 
-* Use a requirements file ``docs/requirements.txt`` to specify the version of Sphinx.
+* Use a requirements file ``docs/requirements.txt`` to specify the version of Sphinx for read the docs.
 * See: https://docs.readthedocs.io/en/stable/guides/specifying-dependencies.html
 * Use this text in the requirements file with the version numbers you are using:
 
@@ -51,37 +51,6 @@ docs/requirements.txt
     sphinx-copybutton==0.5.0
     docutils<0.18  # must be between 0.14 and <0.18 for sphinx_rtd_theme
 
-* To update using the requirements file
-
-.. code-block::
-
-    pip install -U -r requirements.txt
-
-
-* To check the installed version numbers, check the output from typing in the VSCode terminal:
-
-.. code-block::
-
-    pip show sphinx
-    pip show sphinx_rtd_theme
-    pip show sphinx-copybutton
-    pip show docutils
-
-* To get all the installed version numbers, check the output from typing in the VSCode terminal:
-
-.. code-block::
-
-    pip list
-
-* To see if there are updates available, check the output from typing in the VSCode terminal:
-
-.. code-block::
-
-    pip list -o
-
-* For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
-
-* For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
   
 ----
 

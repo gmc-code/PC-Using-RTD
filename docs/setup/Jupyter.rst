@@ -15,8 +15,8 @@ docs/requirements.txt
 
 .. code-block::
     
-    notebook==6.4.7
-    jupyter-sphinx==0.3.2
+    notebook==6.4.12
+    jupyter-sphinx==0.4.0
 
 ----
 
@@ -47,7 +47,7 @@ Install the jupyter notebook
 
 .. code-block::
 
-    pip install notebook==6.4.2
+    pip install notebook==6.4.12
 
 ----
 
@@ -71,8 +71,9 @@ VSCode conf.py file
 
 .. code-block::
 
-     import os
+    import os
     import sys
+
     sys.path.insert(0, os.path.abspath('../../'))
     package_path = os.path.abspath('../..')
     os.environ['PYTHONPATH'] = ':'.join((package_path, os.environ.get('PYTHONPATH', '')))
