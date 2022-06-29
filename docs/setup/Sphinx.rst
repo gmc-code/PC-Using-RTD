@@ -2,7 +2,26 @@
 Sphinx
 ==============================
 
-Sphinx is a documentation generator. This means that it takes a bunch of source files in plain text, and generates a bunch HTML. For our use case it takes plain text files in reStructuredText format, and outputs HTML.
+Sphinx is a documentation generator. This means that it takes source files in plain text, and generates HTML files. In our case, it takes plain text files in reStructuredText format, and outputs HTML.
+
+
+
+Installations
+-----------------------------
+
+Sphinx and some useful extentions can be installed individually or via a requirements.txt file.
+See: at :ref:`_Python_requirements`.
+
+
+* See https://pypi.org/project/Sphinx/
+  
+----
+
+Sphinx extensions
+
+* For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
+* For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
+  
 
 
 All pip installed versions
@@ -14,6 +33,7 @@ All pip installed versions
     
     pip list
 
+----
 
 Install Sphinx
 ------------------------------
@@ -32,9 +52,6 @@ Install Sphinx
     
     pip install -U sphinx
 
-
-
-* See https://pypi.org/project/Sphinx/
 
 * Check the installed version with:
 
@@ -60,8 +77,6 @@ Install the Sphinx theme for Read the Docs
     
     pip install -U sphinx_rtd_theme
 
-
-* See https://pypi.org/project/sphinx-rtd-theme/
 * To use ``sphinx_rtd_theme``, make the changes to the conf.py file that are detailed at :ref:`VSCode conf.py`.
 
 ----
@@ -82,7 +97,5 @@ Install the sphinx-copybutton Extension
     
     pip install -U sphinx-copybutton
 
-
-* See https://pypi.org/project/sphinx-copybutton/
 * To use ``sphinx-copybutton``, make the changes to the conf.py file that are detailed at :ref:`VSCode conf.py`.
 

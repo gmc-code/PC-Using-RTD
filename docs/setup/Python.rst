@@ -22,20 +22,20 @@ Virtual environment
 | See: https://www.youtube.com/watch?v=APOPm01BVrk
 | Rather than installing the python packages in the system wide installation of python, a virtual environment can be created that only has the modules needed for sphinx and read the docs.
 | Virtual environments allow easy maintenance of the libraries needed for the project and avoid issues that can happen when multiple dependencies conflict across multiple projects.
-| Create a virtual environment for the packages needed for read the docs.
-| By default, these will be created in the users directory: ``"C:\Users\username\"``.
-| In examples below, the virtual environment folder will be called: ``rtd_venv310``.
 
-| If there are different version of python installed use the full path to the version required to create the virtual environment.
-| e.g. "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe"
+| Create a virtual environment for the packages needed for read the docs.
+| By default, these will be created in the users directory: ``C:\Users\username\``.
+| In examples below, the virtual environment folder will be called: ``rtd_venv310``.
 
 | Create a virtual environment with the default system python:
 
 .. code-block::
 
     python -m venv rtd_venv310
-
-| Or, create a virtual environment using a specific installed version of python:
+    
+| If there are different versions of python installed, use the full path to the version required to create the virtual environment.
+| e.g. ``C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe``
+| Create a virtual environment using a specific installed version of python:
 
 .. code-block::
 
@@ -47,7 +47,15 @@ Virtual environment
     
     "C:\Users\username\rtd_venv310\Scripts\activate.bat"
 
-| Place a file, called ``readthedocs_requirements.txt``, into the virtual environment folder.
+
+----
+
+.. _Python_requirements:
+
+Install pakages via requirements.txt
+--------------------------------------
+
+| Place a file, called ``requirements.txt``, into the virtual environment folder.
 | Into the file, place the text below, containing the suggested python modules for working with sphinx.
 
 .. code-block::
@@ -71,14 +79,11 @@ Virtual environment
     rstcheck==6.0.0.post1
     esbonio==0.13.0
   
-| Install requirements using the full path to a readthedocs_requirements.txt file placed in the virtual environment:
+| Install requirements using the full path to a requirements.txt file placed in the virtual environment:
 
 .. code-block::
     
-    pip install -r "C:\Users\username\rtd_venv310\readthedocs_requirements.txt"
-
-
-
+    pip install -r "C:\Users\username\rtd_venv310\requirements.txt"
 
 ----
 
@@ -86,27 +91,22 @@ Updating python packages in a requirements file
 ------------------------------------------------------------
 
 | After setting up a project, there may be a need to update the packages required that are listed in the ``requirements.txt`` file.
-| Suggested python modules for working with sphinx:
-
-    * sphinx==5.0.2
-    * sphinx_rtd_theme==1.0.0
-    * sphinx-copybutton==0.5.0
 
 | From the command line change directory, ``cd`` to the folder with the ``requirements.txt`` file and use:
 
 .. code-block::
     
-    cd docs
+    cd rtd_venv310
     pip install --upgrade -r requirements.txt
 
-* To update using the requirements file
+* ``-U`` can be used instead of ``--upgrade``
 
 .. code-block::
 
     pip install -U -r requirements.txt
 
 
-* To check the installed version numbers, check the output from typing in the VSCode terminal:
+* To check the installed version numbers and other info about a package, check the output from typing in the VSCode terminal:
 
 .. code-block::
 
@@ -126,10 +126,6 @@ Updating python packages in a requirements file
 .. code-block::
 
     pip list -o
-
-* For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
-
-* For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
 
 ----
 

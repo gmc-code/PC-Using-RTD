@@ -19,7 +19,7 @@ Add files
 .. code-block::
 
     type nul > requirements.txt
-    type nul > .readthedocs.yml
+    type nul > .readthedocs.yaml
     type nul > .gitignore
     
 #. Add the ``_templates/breadcrumbs.html`` file using the VSCode terminal. Run from within the **docs** folder.
@@ -51,16 +51,25 @@ docs/requirements.txt
     sphinx-copybutton==0.5.0
     docutils<0.18  # must be between 0.14 and <0.18 for sphinx_rtd_theme
 
-  
+    # for interactive jupyter 
+    notebook==6.4.12
+    jupyter-sphinx==0.4.0
+    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
+
+    # useful sphinx extensions
+    sphinx-design==0.2.0
+    sphinx-togglebutton==0.3.1
+
+
 ----
 
-docs/.readthedocs.yml
+docs/.readthedocs.yaml
 ------------------------------
 
-* Use a config file ``docs/.readthedocs.yml`` so that the requirements file can be used.
+* Use a config file ``docs/.readthedocs.yaml`` so that the requirements file can be used.
 * Get the file contents from the main example at: https://docs.readthedocs.io/en/stable/config-file/v2.html
-* This sets some of the advanced settings for read the docs that would otherwise be accessed by Admin:Advance Settings in Read The doc.
-* e.g the setting to Build PDF or ePub are controlled in the .yml file.
+* This sets some of the advanced settings for read the docs that would otherwise be accessed by Admin:Advance Settings in Read The Docs.
+* e.g the setting to Build PDF or ePub are controlled in the .yaml file.
 
 ----
 

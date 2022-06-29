@@ -11,9 +11,7 @@ Required software
 #. Python
 #. Sphinx
 #. Sphinx theme for read the docs
-#. Sphinx copy button extension
-#. Optional: Jupyter notebook
-#. Optional: Sphinx jupyter-sphinx extension
+#. Sphinx extensions
 #. Visual Studio code (VSCode)
 #. Visual Studio code reStructuredText (reST) extension
 #. Git command line tool
