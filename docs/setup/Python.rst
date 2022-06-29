@@ -20,11 +20,11 @@ Virtual environment
 ---------------------
 
 | See: https://www.youtube.com/watch?v=APOPm01BVrk
-| Rather than installing the python packages, needed for sphinx and read the docs, in the system wide installation of python, a virtual environment can be created that only has these modules.
+| Rather than installing the python packages in the system wide installation of python, a virtual environment can be created that only has the modules needed for sphinx and read the docs.
 | Virtual environments allow easy maintenance of the libraries needed for the project and avoid issues that can happen when multiple dependencies conflict across multiple projects.
-| Create  a virtual environment for the packages needed for read the docs.
-| By default, these will be created in the users directory: "C:\Users\username\".
-| In examples below, teh virtual environment folder will be called: rtd_venv310.
+| Create a virtual environment for the packages needed for read the docs.
+| By default, these will be created in the users directory: ``"C:\Users\username\"``.
+| In examples below, the virtual environment folder will be called: ``rtd_venv310``.
 
 | If there are different version of python installed use the full path to the version required to create the virtual environment.
 | e.g. "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe"
@@ -35,7 +35,7 @@ Virtual environment
 
     python -m venv rtd_venv310
 
-| Or, create  a virtual environment using a specific installed version of python:
+| Or, create a virtual environment using a specific installed version of python:
 
 .. code-block::
 
@@ -47,20 +47,29 @@ Virtual environment
     
     "C:\Users\username\rtd_venv310\Scripts\activate.bat"
 
-| PLace a file, called ``readthedocs_requirements.txt``, into the virtual environment folder.
+| Place a file, called ``readthedocs_requirements.txt``, into the virtual environment folder.
 | Into the file, place the text below, containing the suggested python modules for working with sphinx.
 
 .. code-block::
     
-    sphinx==4.5.0 # current is sphinx==5.0.2
+    # requirements for venv
+    sphinx==5.0.2
     sphinx_rtd_theme==1.0.0
     sphinx-copybutton==0.5.0
     docutils<0.18  # must be between 0.14 and <0.18 for sphinx
+
+    # for interactive jupyter 
     notebook==6.4.12
     jupyter-sphinx==0.4.0
     sphinx-thebe==0.1.2 # requires sphinx==4.5.0
-    rstcheck
-    esbonio
+
+    # useful sphinx extensions
+    sphinx-design==0.2.0
+    sphinx-togglebutton==0.3.1
+
+    # for vscode
+    rstcheck==6.0.0.post1
+    esbonio==0.13.0
   
 | Install requirements using the full path to a readthedocs_requirements.txt file placed in the virtual environment:
 
