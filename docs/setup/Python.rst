@@ -50,9 +50,9 @@ Virtual environment
 
 ----
 
-.. _Python_requirements:
+.. _Python requirements:
 
-Install pakages via requirements.txt
+Install packages via requirements.txt
 --------------------------------------
 
 | Place a file, called ``requirements.txt``, into the virtual environment folder.

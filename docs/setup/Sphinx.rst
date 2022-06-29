@@ -4,13 +4,13 @@ Sphinx
 
 Sphinx is a documentation generator. This means that it takes source files in plain text, and generates HTML files. In our case, it takes plain text files in reStructuredText format, and outputs HTML.
 
-
+----
 
 Installations
 -----------------------------
 
 Sphinx and some useful extentions can be installed individually or via a requirements.txt file.
-See: at :ref:`_Python_requirements`.
+See: :ref:`Python requirements`.
 
 
 * See https://pypi.org/project/Sphinx/
@@ -22,7 +22,7 @@ Sphinx extensions
 * For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
 * For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
   
-
+----
 
 All pip installed versions
 -----------------------------
