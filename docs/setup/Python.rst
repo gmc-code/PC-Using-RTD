@@ -83,14 +83,13 @@ Install python packages via requirements.txt
     rstcheck==6.0.0.post1
     esbonio==0.13.0
     
-    # optional for interactive jupyter 
-    notebook==6.4.12
-    jupyter-sphinx==0.4.0
-    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
-
     # optional useful sphinx extensions
     sphinx-design==0.2.0
     sphinx-togglebutton==0.3.1
+    
+    # optional for interactive jupyter
+    jupyter-sphinx==0.4.0
+    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
 
 
   

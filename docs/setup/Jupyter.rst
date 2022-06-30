@@ -6,64 +6,33 @@ This is optional.
 
 It is possible to use Jupyter in Sphinx files. 
 
-Jupyter-sphinx is a Sphinx extension that executes embedded code in a Jupyter kernel, and embeds outputs of that code in the document. It has support for rich output such as Latex math. It allows live code execution, and thereby, interactive code blocks.
+For the ability to edit the python code live and view the ouput there are two options:
+    * jupyter-sphinx
+    * sphinx-thebe
 
-Jupyter-sphinx allows use of thebelab for live code execution.
+For the ability to view the ouput from jupyter notebook files use nbsphinx.
 
 | For use of jupyter notebook files, ``.ipynb``, with sphinx:
 | see https://docs.readthedocs.io/en/stable/guides/jupyter.html
-| and https://nbsphinx.readthedocs.io/
-
-
-----
-
-docs/requirements.txt
-------------------------------
-
-* Add this text in the requirements file ``docs/requirements.txt``:
-
-.. code-block::
-    
-    notebook==6.4.12
-    jupyter-sphinx==0.4.0
-    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
+| see https://nbsphinx.readthedocs.io/
+| see https://pypi.org/project/nbsphinx/
 
 ----
 
-Install the jupyter notebook
-------------------------------
+-------------------
+Jupyter-sphinx
+-------------------
 
-* See https://pypi.org/project/notebook/
+Jupyter-sphinx is a Sphinx extension that executes embedded code in a Jupyter kernel, and embeds outputs of that code in the document. It has support for rich output such as Latex math. It allows live code execution, and thereby, interactive code blocks.
 
-* Check the version of jupyter notebook already installed from the command line.
-
-.. code-block::
-
-    pip show notebook
-
-* Install the jupyter notebook from the command line.
-
-.. code-block::
-
-    pip install notebook
-
-* Update to the latest version of the jupyter notebook from the command line.
-
-.. code-block::
-
-    pip install notebook --upgrade
-
-* To install a specific version, type the package name followed by the required version.
-
-.. code-block::
-
-    pip install notebook==6.4.12
+It has the drawback that it is not fully compatable with the sphinx-copybutton extension. When both are used together the text "Copy to clipboard" has to be manually deleted form the live python code before it will run properly.
 
 ----
 
 Install the jupyter-sphinx extension
-------------------------------------------------------------
+--------------------------------------
 
+* See: https://pypi.org/project/jupyter-sphinx/
 * See: https://jupyter-sphinx.readthedocs.io/en/latest/
 
 * Install the jupyter-sphinx extension from the command line.
@@ -74,10 +43,21 @@ Install the jupyter-sphinx extension
     
 ----
 
+docs/requirements.txt
+------------------------------
+
+* Add this text in the requirements file ``docs/requirements.txt``:
+
+.. code-block::
+    
+    jupyter-sphinx==0.4.0
+    
+----
+
 VSCode conf.py file
 ------------------------------
 
-* Add this text in to the file: ``docs/conf.py``.
+* Add this text into the file: ``docs/conf.py``.
 
 .. code-block::
 
@@ -98,7 +78,7 @@ VSCode conf.py file
     ]
 
 
-* To enable interactive cells, add this text in to the file: ``docs/conf.py``.
+* To enable interactive cells, add this text into the file: ``docs/conf.py``.
 
 .. code-block::
 
@@ -111,21 +91,8 @@ VSCode conf.py file
 
 ----
 
-Enable Jupyter notebook Interactivity
-------------------------------------------------------------
-
-* See: https://jupyter-sphinx.readthedocs.io/en/latest/
-* Interactive cells are activated with a button click.
-* By default the button is added at the end of the document, but it may also be inserted anywhere using
-
-.. code-block::
-
-    .. thebe-button:: Optional title
-
-----
-
 Usage
-------------------------------
+----------------
 
 * Use the jupyter-execute directive to embed code into the document.
 
@@ -133,9 +100,95 @@ Usage
 
     .. jupyter-execute::
 
-    x = 4
-    y = 5
-    ans = x * y
-    print('x * y = ' + str(ans))
+        x = 4
+        y = 5
+        ans = x * y
+        print('x * y = ' + str(ans))
+
+----
+
+* Interactive cells are activated with a button click.
+* By default the button is added at the end of the document, but it may also be inserted anywhere using:
+
+.. code-block::
+
+    .. thebe-button:: Optional title
+
+----
+
+-------------------
+sphinx-thebe
+-------------------
+
+| The sphinx-thebe extension makes code cells interactive with a kernel provided by Thebe and Binder.
+| The drawback is that is is not compatiable with the latest version of Sphinx. Instead it requires sphinx==4.5.0.
+
+----
+
+Install the sphinx-thebe extension
+--------------------------------------
+
+* See: https://pypi.org/project/sphinx-thebe/
+* See: https://sphinx-thebe.readthedocs.io/en/latest/
+
+* Install the sphinx-thebe extension from the command line.
+
+.. code-block::
+
+    pip install sphinx-thebe
+    
+----
+
+docs/requirements.txt
+------------------------------
+
+* Add this text in the requirements file ``docs/requirements.txt``:
+
+.. code-block::
+    
+    sphinx==4.5.0
+    sphinx-thebe==0.1.2 
+
+----
+
+VSCode conf.py file
+------------------------------
+
+* Edit the extensions to add ``jupyter_sphinx``, in the file: ``docs/conf.py``.
+
+.. code-block::
+
+    extensions = [
+        'sphinx_thebe',
+    ]
+
+----
+
+Usage
+----------------
+
+* Interactive cells are activated with a button click.
+* Insert the button anywhere using:
+  
+.. code-block::
+
+    .. thebe-button:: Activate Jupyter
+
+----
+
+class: thebe
+--------------------
+
+* Use the ``:class: thebe`` directive in a python code block to give thebe access to run the code.
+
+.. code-block:: python
+    :class: thebe
+
+    def name_age_greeting(name, age):
+        age += 1
+        return "Hi " + name + ", you are " + str(age) + " years old"
+
+    print(name_age_greeting("Joe", 12))
+
 
 
