@@ -9,8 +9,8 @@ Sphinx is a documentation generator. This means that it takes source files in pl
 Installations
 -----------------------------
 
-Sphinx and some useful extentions can be installed individually or via a requirements.txt file.
-See: :ref:`Python requirements`.
+| Sphinx and some useful extentions can be installed individually or via a requirements.txt file.
+| For installing all in one go via a requirements.txt file steps: :ref:`Python requirements`.
 
 
 * See https://pypi.org/project/Sphinx/
@@ -21,7 +21,10 @@ Sphinx extensions
 
 * For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
 * For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
-  
+* 
+      sphinx-design==0.2.0
+    sphinx-togglebutton==0.3.1
+    
 ----
 
 All pip installed versions

@@ -16,7 +16,7 @@ The second and third option require the use of Sphinx to build the html output.
 View docs as html in VSCode
 ------------------------------
 
-* Install the ``HTML preview`` extension in VSCode, then use the Open Preview to the Side icon at the top right of the window to preview an open .rst file.
+* Install the ``reStructuredText`` extension in VSCode, then use the Open Preview to the Side icon at the top right of the window to preview an open .rst file.
 
 ----
 
@@ -90,6 +90,8 @@ View docs as pdf
 ------------------------------
 
 Make the latex build then create the pdf from the .tex file.
+
+----
 
 Make latex
 ------------------------------

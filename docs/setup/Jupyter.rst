@@ -4,7 +4,16 @@ Jupyter
 
 This is optional. 
 
-It is possible to use Jupyter in Sphinx files. Jupyter-sphinx is a Sphinx extension that executes embedded code in a Jupyter kernel, and embeds outputs of that code in the document. It has support for rich output such as Latex math. It allows live code execution, and thereby, interactive code blocks.
+It is possible to use Jupyter in Sphinx files. 
+
+Jupyter-sphinx is a Sphinx extension that executes embedded code in a Jupyter kernel, and embeds outputs of that code in the document. It has support for rich output such as Latex math. It allows live code execution, and thereby, interactive code blocks.
+
+Jupyter-sphinx allows use of thebelab for live code execution.
+
+| For use of jupyter notebook files, ``.ipynb``, with sphinx:
+| see https://docs.readthedocs.io/en/stable/guides/jupyter.html
+| and https://nbsphinx.readthedocs.io/
+
 
 ----
 
@@ -17,6 +26,7 @@ docs/requirements.txt
     
     notebook==6.4.12
     jupyter-sphinx==0.4.0
+    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
 
 ----
 

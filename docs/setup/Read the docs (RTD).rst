@@ -23,16 +23,28 @@ Import GitHub project
 ------------------------------
 
 * Go to https://readthedocs.org/dashboard/
-* Click: Import project
+* Click: Import project or choose the project from the list (if previously imported)
 * Click refresh to show all GitHub repositories
 * Click on a plus sign for a repo
 * Name and URL are automatic
 * Advanced: enter "master" as branch for latest.
 * Click Build to build it in RTD.
 
-Webhooks are automatic for imported projects.
-* For manual imports see webhooks at: https://docs.readthedocs.io/en/stable/webhooks.html
+----
 
+Integrations - GitHub Webhooks 
+------------------------------
+
+| Read the Docs provides integrations, mainly using webhooks. Integrations are configured GitHub, and with each change to your repository, Read the Docs is notified and a build is triggered.
+| See: https://docs.readthedocs.io/en/stable/webhooks.html
+  
+* Go to https://readthedocs.org/dashboard/
+* Click the project in the list (previously imported)
+* Click Admin to show the settings
+* Click Integrations.
+* Click Add integration.
+* Choose GitHub incoming webhook.
+  
 ----
 
 RTD Advanced Settings
@@ -41,8 +53,8 @@ RTD Advanced Settings
 * Go to https://readthedocs.org/dashboard/
 * Click on Admin
 * Click on Advanced Settings
-* Scroll to the bottom to check or uncheck **Enable PDF build** and **Enable ePub build** 
-* These settings should be set in the .yml config file.
+* Scroll to the bottom to check or uncheck **Enable PDF build** 
+* These settings should be set in the .yaml config file.
 
 ----
 
