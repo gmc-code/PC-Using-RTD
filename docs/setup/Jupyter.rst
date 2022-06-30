@@ -10,12 +10,8 @@ For the ability to edit the python code live and view the ouput there are two op
     * jupyter-sphinx
     * sphinx-thebe
 
-For the ability to view the ouput from jupyter notebook files use nbsphinx.
-
-| For use of jupyter notebook files, ``.ipynb``, with sphinx:
-| see https://docs.readthedocs.io/en/stable/guides/jupyter.html
-| see https://nbsphinx.readthedocs.io/
-| see https://pypi.org/project/nbsphinx/
+For the ability to view the ouput from jupyter notebook files use:
+    * nbsphinx
 
 ----
 
@@ -191,4 +187,56 @@ class: thebe
     print(name_age_greeting("Joe", 12))
 
 
+----
 
+-------------------
+nbsphinx
+-------------------
+
+| nbsphinx allows the use of jupyter notebook files, ``.ipynb``, with sphinx.
+
+----
+
+Install the nbsphinx extension
+--------------------------------------
+
+| See: https://pypi.org/project/nbsphinx/
+| See: https://nbsphinx.readthedocs.io/
+| See: https://docs.readthedocs.io/en/stable/guides/jupyter.html
+
+* Install the nbsphinx extension from the command line.
+
+.. code-block::
+
+    pip install nbsphinx
+    
+----
+
+docs/requirements.txt
+------------------------------
+
+* Add this text in the requirements file ``docs/requirements.txt``:
+
+.. code-block::
+    
+    nbsphinx==0.8.9 
+
+----
+
+VSCode conf.py file
+------------------------------
+
+* Edit the extensions to add ``nbsphinx``, in the file: ``docs/conf.py``.
+
+.. code-block::
+
+    extensions = [
+        'nbsphinx',
+    ]
+
+----
+
+Usage
+----------------
+
+| Edit the index.rst and add the names of *.ipynb files to the toctree.

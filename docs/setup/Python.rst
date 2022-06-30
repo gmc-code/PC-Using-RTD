@@ -13,7 +13,6 @@ Install Python
 
 * Download and install Python from https://www.python.org/downloads/.
 
-
 ----
 
 Create a python Virtual environment
@@ -87,12 +86,7 @@ Install python packages via requirements.txt
     sphinx-design==0.2.0
     sphinx-togglebutton==0.3.1
     
-    # optional for interactive jupyter
-    jupyter-sphinx==0.4.0
-    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
 
-
-  
 | Install requirements using the full path to a requirements.txt file placed in the virtual environment:
 
 .. code-block::
