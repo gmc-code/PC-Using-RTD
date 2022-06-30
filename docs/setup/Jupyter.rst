@@ -210,6 +210,23 @@ Install the nbsphinx extension
 
     pip install nbsphinx
     
+* To edit .ipynb files in VSCode install the ipykernel package.
+
+----
+
+VSCode Jupyter extension
+------------------------------------------------------------
+
+* In VSCode, click the Extensions icon in the left side bar.
+* Type ``Jupyter`` into the search box.
+* Install the Jupyter extension.
+  
+* To edit .ipynb files in VSCode install the python ipykernel package.
+
+.. code-block::
+    
+    pip install ipykernel
+
 ----
 
 docs/requirements.txt
