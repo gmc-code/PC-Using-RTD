@@ -17,12 +17,15 @@ Installations
   
 ----
 
-Sphinx extensions
+Suggested Sphinx extensions
+-----------------------------
+
+Sphinx and the following suggested extensions can be installed individaully or via the requirements.txt file.
 
 * For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
 * For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
-* 
-      sphinx-design==0.2.0
+
+    sphinx-design==0.2.0
     sphinx-togglebutton==0.3.1
     
 ----
