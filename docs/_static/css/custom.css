@@ -91,12 +91,12 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) {
 /* Copy buttons for sphinx-copybutton extension */
 /* https://github.com/executablebooks/sphinx-copybutton/blob/master/sphinx_copybutton/_static/copybutton.css */
 
-/* w,h orig 1.7 em; top .3em */
+/* w,h orig 1.7 em; top, right .3em */
 button.copybtn {
     position: absolute;
     display: flex;
     top: .1em;
-    right: .3em;
+    right: .1em;
     width: 1.5em;
     height: 1.5em;
 	opacity: 1;
@@ -123,8 +123,8 @@ button.copybtn.success {
 /* w,h orig 1.5 em */
 button.copybtn svg {
     stroke: currentColor;
-    width: 1.3em;   
-    height: 1.3em;
+    width: 1.4em;   
+    height: 1.4em;
     padding: 0.1em;
 }
 
