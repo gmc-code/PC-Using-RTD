@@ -257,3 +257,49 @@ Usage
 ----------------
 
 | Edit the index.rst and add the names of *.ipynb files to the toctree.
+
+----
+------------------------
+sphinxcontrib-jupyter
+------------------------
+
+| sphinxcontrib-jupyter converts rst fiels into jupyter notebook files, ``.ipynb``, with sphinx.
+
+----
+
+Install the sphinxcontrib-jupyter extension
+--------------------------------------
+
+| See: https://pypi.org/project/sphinxcontrib-jupyter/
+| See: https://sphinxcontrib-jupyter.readthedocs.io/en/latest/
+
+* Install the sphinxcontrib-jupyter extension from the command line.
+
+.. code-block::
+
+    pip install sphinxcontrib-jupyter
+    
+----
+
+VSCode conf.py file
+------------------------------
+
+* Edit the extensions to add ``nbsphinx``, in the file: ``docs/conf.py``.
+
+.. code-block::
+
+    extensions = [
+        'sphinxcontrib.jupyter',
+    ]
+
+----
+
+Usage
+----------------
+
+| From the terminal, run:
+
+.. code-block::
+
+    make jupyter
+
