@@ -13,6 +13,9 @@ For the ability to edit the python code live and view the ouput there are two op
 For the ability to view the ouput from jupyter notebook files use:
     * nbsphinx
 
+For the ability to convert the docs rst files to jupyter notebook files use:
+    * sphinxcontrib-jupyter
+  
 ----
 
 -------------------
@@ -222,7 +225,9 @@ VSCode Jupyter extension
 * Install the Jupyter extension.
   
 * To edit .ipynb files in VSCode install the python ipykernel package.
-
+* See: https://pypi.org/project/ipykernel/
+* See: https://ipython.org/
+  
 .. code-block::
     
     pip install ipykernel
@@ -256,14 +261,15 @@ VSCode conf.py file
 Usage
 ----------------
 
-| Edit the index.rst and add the names of *.ipynb files to the toctree.
+| Edit the index.rst and add the names of .ipynb files to the toctree.
 
 ----
+
 ------------------------
 sphinxcontrib-jupyter
 ------------------------
 
-| sphinxcontrib-jupyter converts rst fiels into jupyter notebook files, ``.ipynb``, with sphinx.
+| sphinxcontrib-jupyter converts rst files into jupyter notebook files, ``.ipynb``, with sphinx.
 
 ----
 
@@ -297,9 +303,11 @@ VSCode conf.py file
 Usage
 ----------------
 
+| To build a collection of Jupyter notebooks for the Sphinx Project:
 | From the terminal, run:
 
 .. code-block::
 
-    make jupyter
+    cd docs
+    .\make jupyter
 
