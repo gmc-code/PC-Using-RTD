@@ -97,8 +97,8 @@ button.copybtn {
     display: flex;
     top: .1em;
     right: .3em;
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.5em;
+    height: 1.5em;
 	opacity: 1;
     transition: opacity 0.3s, border .3s, background-color .3s;
     user-select: none;
@@ -107,7 +107,7 @@ button.copybtn {
     outline: none;
     border-radius: 0.4em;
     border: #1b1f2426 1px solid;
-    background-color: #eeffcc;
+    background-color: #f6f8fa;
     color: blue
     /* The colors that GitHub uses 
     border: #1b1f2426 1px solid;
@@ -123,8 +123,8 @@ button.copybtn.success {
 /* w,h orig 1.5 em */
 button.copybtn svg {
     stroke: currentColor;
-    width: 1.0em;   
-    height: 1.0em;
+    width: 1.3em;   
+    height: 1.3em;
     padding: 0.1em;
 }
 
