@@ -157,6 +157,7 @@ Uninstalling all python packages
 | To remove all installed python packages, leaving just the built in modules, from the command line:
 
 .. code-block::
-
+    :class: no-copybutton
+    
     pip freeze | xargs pip uninstall -y
 
