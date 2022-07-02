@@ -24,7 +24,8 @@ Sphinx and the following suggested extensions can be installed individaully or v
 
 * For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
 * For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
-
+* For sphinx-copybutton css go to:https://github.com/executablebooks/sphinx-copybutton/blob/master/sphinx_copybutton/_static/copybutton.css
+  
     sphinx-design==0.2.0
     sphinx-togglebutton==0.3.1
     
