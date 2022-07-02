@@ -19,6 +19,9 @@ extensions = [
     'sphinx.ext.autodoc',
 ]
 
+# for copybutton to allow use of :class: no-copybutton  in code blocks
+# copybutton_selector = "div:not(.no-copybutton) > div.highlight > pre"
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -55,7 +58,7 @@ html_theme = 'sphinx_rtd_theme'
 # html_title = None
 html_title = "PC-Using-RTD"
 
-# Use custom css
+# Use custom css  html_css_files = ["custom.css"]
 html_css_files = ['css/custom.css']
 
 # Add any paths that contain custom static files (such as style sheets) here,
