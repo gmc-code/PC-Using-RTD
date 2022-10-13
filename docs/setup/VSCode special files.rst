@@ -46,19 +46,18 @@ docs/requirements.txt
 
 .. code-block::
 
-    sphinx>=5.2.3
-    sphinx_rtd_theme>=1.0.0
-    sphinx-copybutton>=0.5.0
-    docutils<0.18  # must be between 0.14 and <0.18 for sphinx_rtd_theme
+    sphinx
+    sphinx_rtd_theme
+    sphinx-copybutton
 
     # for interactive jupyter 
-    notebook==6.4.12
-    jupyter-sphinx==0.4.0
-    sphinx-thebe==0.1.2 # requires sphinx==4.5.0
+    notebook
+    jupyter-sphinx
+    sphinx-thebe
 
     # useful sphinx extensions
-    sphinx-design==0.3.0
-    sphinx-togglebutton==0.3.2
+    sphinx-design
+    sphinx-togglebutton
 
 
 ----
