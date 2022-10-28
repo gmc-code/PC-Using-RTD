@@ -92,8 +92,6 @@ Install python packages via requirements.txt
     sphinx
     sphinx_rtd_theme
     sphinx-copybutton
-    sphinx-copybutton==0.5.0
-
 
     # for vscode
     rstcheck
