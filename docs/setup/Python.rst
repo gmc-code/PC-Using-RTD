@@ -66,6 +66,17 @@ Using the python Virtual environment in VSCode
 
 ----
 
+Update pip
+-----------------------------------------------
+
+| To upgrage pip run:
+
+.. code-block::
+
+    pip install --upgrade pip
+
+----
+
 .. _Python requirements:
 
 Install python packages via requirements.txt
@@ -78,18 +89,19 @@ Install python packages via requirements.txt
 .. code-block::
     
     # for sphinx to work
-    sphinx==5.0.2
-    sphinx_rtd_theme==1.0.0
+    sphinx
+    sphinx_rtd_theme
+    sphinx-copybutton
     sphinx-copybutton==0.5.0
-    docutils<0.18  # must be between 0.14 and <0.18 for sphinx
+
 
     # for vscode
-    rstcheck==6.0.0.post1
-    esbonio==0.13.0
+    rstcheck
+    esbonio
     
     # optional useful sphinx extensions
-    sphinx-design==0.2.0
-    sphinx-togglebutton==0.3.1
+    sphinx-design
+    sphinx-togglebutton
     
 
 | Install requirements using the full path to a requirements.txt file placed in the virtual environment:
@@ -97,6 +109,12 @@ Install python packages via requirements.txt
 .. code-block::
     
     pip install -r "C:\Users\username\venv_rtd\requirements.txt"
+
+| If the terminal prompt is already in the path "C:\Users\username" then use this:
+
+.. code-block::
+
+    pip install -r "venv_web\requirements.txt"
 
 ----
 
