@@ -12,7 +12,12 @@ Install Python
     python --version
 
 * Download and install Python from https://www.python.org/downloads/.
-
+* Check the checkbox to update the path variable when installing.
+* Manually update path if it wasn't automatically done during installation.
+* In windows search enter "edit the system environment variables" to edit the environment variables. 
+* Edit the path variable to include the path to the installed python version.
+* Restart is usually needed to update the system path.
+  
 ----
 
 Create a python Virtual environment
@@ -24,13 +29,13 @@ Create a python Virtual environment
 
 | Create a virtual environment for the packages needed for read the docs.
 | By default, these will be created in the users directory: ``C:\Users\username\``.
-| In examples below, the virtual environment folder will be called: ``rtd_venv310``, but any suitable name can be used.
+| In examples below, the virtual environment folder will be called: ``venv_rtd``, but any suitable name can be used.
 
 | Create a virtual environment with the default system python:
 
 .. code-block::
 
-    python -m venv rtd_venv310
+    python -m venv venv_rtd
     
 | If there are different versions of python installed, use the full path to the version required to create the virtual environment.
 | <username> used in the paths below will be different for each user.
@@ -39,13 +44,13 @@ Create a python Virtual environment
 
 .. code-block::
 
-    "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe" -m venv rtd_venv310
+    "C:\Users\username\AppData\Local\Programs\Python\Python310\python.exe" -m venv venv_rtd
 
 | Activate the virtual environment:
 
 .. code-block::
     
-    "C:\Users\username\rtd_venv310\Scripts\activate.bat"
+    "C:\Users\username\venv_rtd\Scripts\activate.bat"
 
 ----
 
@@ -57,7 +62,7 @@ Using the python Virtual environment in VSCode
 
     #. Choose **View: Command Palette**. 
     #. Into the drop down search field, type: **Python : Select Interpreter**
-    #. Choose the one listed that refers to the newly created **rtd_venv310**.
+    #. Choose the one listed that refers to the newly created **venv_rtd**.
 
 ----
 
@@ -91,7 +96,7 @@ Install python packages via requirements.txt
 
 .. code-block::
     
-    pip install -r "C:\Users\username\rtd_venv310\requirements.txt"
+    pip install -r "C:\Users\username\venv_rtd\requirements.txt"
 
 ----
 
@@ -104,7 +109,7 @@ Updating python packages in a requirements file
 
 .. code-block::
     
-    cd rtd_venv310
+    cd venv_rtd
     pip install --upgrade -r requirements.txt
 
 * ``-U`` can be used instead of ``--upgrade``
