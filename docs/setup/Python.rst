@@ -158,6 +158,19 @@ Updating python packages in a requirements file
 
 ----
 
+Save package list to requirements file
+------------------------------------------------------------
+
+| After setting up a project, there may be a need to create a new the virtual environment with a new verion of python, but with all the libraries in the the virtual environment 
+
+| A ``requirements.txt`` file can be saved and used to create a new venv:
+
+.. code-block::
+    
+    pip freeze > requirements.txt
+
+----
+
 Updating python packages
 ------------------------------
 
