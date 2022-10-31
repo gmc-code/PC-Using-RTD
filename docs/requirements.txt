@@ -3,9 +3,9 @@ sphinx_rtd_theme
 sphinx-copybutton
 
 # for interactive jupyter
-notebook
-jupyter-sphinx
-sphinx-thebe
+# notebook
+# jupyter-sphinx
+# sphinx-thebe
 
 # useful sphinx extensions
 sphinx-design
