@@ -24,6 +24,8 @@ VSCode starting from **creating a new empty repository**
 * See :ref:`VSCode Project Folder and Sphinx`
 * e.g. https://github.com/mygithubname/myrepo
 * Do not create a readme file at this time.
+* Do not select a licence at this time.
+* Addinga read me or selecting a licence will cause an initial commit and will not show the code to use to create the git on your local amchine.
 * Copy the "create a new repository on the command line" code for use later.
 
 .. code-block::
