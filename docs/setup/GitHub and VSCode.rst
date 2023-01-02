@@ -6,6 +6,8 @@ GitHub and VSCode
 
 The info below is for the simplest approach where there is only the master branch locally which is being maintained and pushed to the github repository.
 
+FOr github advice see: https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github
+
 ----
 
 GitHub account
