@@ -17,6 +17,8 @@ extensions = [
     'sphinx_copybutton',
     'sphinx.ext.todo',
     'sphinx.ext.autodoc',
+    'sphinx_togglebutton',
+    'sphinx_design',
 ]
 
 # for copybutton to allow use of :class: no-copybutton  in code blocks

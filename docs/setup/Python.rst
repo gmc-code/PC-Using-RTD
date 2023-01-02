@@ -88,18 +88,20 @@ Install python packages via requirements.txt
 
 .. code-block::
     
-    # for sphinx to work
-    sphinx
-    sphinx_rtd_theme
-    sphinx-copybutton
+    # for sphinx-rtd-theme==1.1.1 to work
+    docutils==0.17.1
+    Sphinx==5.3.0
+    sphinx-copybutton==0.5.1
+    sphinx-rtd-theme==1.1.1
+
+    # useful
+    sphinx-togglebutton==0.3.2
+    sphinx_design==0.3.0
 
     # for vscode
     rstcheck
     esbonio
     
-    # optional useful sphinx extensions
-    sphinx-design
-    sphinx-togglebutton
     
 
 | Install requirements using the full path to a requirements.txt file placed in the virtual environment:

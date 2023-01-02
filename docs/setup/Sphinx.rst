@@ -25,10 +25,27 @@ Sphinx and the following suggested extensions can be installed individaully or v
 * For sphinx-rtd-theme go to: https://pypi.org/project/sphinx-rtd-theme/
 * For sphinx-copybutton go to: https://pypi.org/project/sphinx-copybutton/
 * For sphinx-copybutton css go to:https://github.com/executablebooks/sphinx-copybutton/blob/master/sphinx_copybutton/_static/copybutton.css
-  
-    sphinx-design==0.2.0
-    sphinx-togglebutton==0.3.1
+* For sphinx-design go to: https://pypi.org/project/sphinx_design/
+* For sphinx-togglebutton go to: https://pypi.org/project/sphinx-togglebutton/
+
+----
+
+Dependencies
+--------------
+
+As of Jan 1 2023, sphinx-rtd-theme 1.1.1 requires Sphinx<6 and docutils<0.18
+
+
+
+.. code-block::
     
+    pip install docutils==0.17.1
+    pip install Sphinx==5.3.0
+    pip install sphinx-copybutton==0.5.1
+    pip install sphinx-rtd-theme==1.1.1
+    pip install sphinx-togglebutton==0.3.2
+    pip install sphinx_design==0.3.0
+
 ----
 
 All pip installed versions
@@ -50,14 +67,14 @@ Install Sphinx
 
 .. code-block::
     
-    pip install sphinx
+    pip install sphinx==5.3.0
 
 
 * To upgrade include the ``-U`` flag.
 
 .. code-block::
     
-    pip install -U sphinx
+    pip install -U sphinx==5.3.0
 
 
 * Check the installed version with:
@@ -106,3 +123,41 @@ Install the sphinx-copybutton Extension
 
 * To use ``sphinx-copybutton``, make the changes to the conf.py file that are detailed at :ref:`VSCode conf.py`.
 
+----
+
+Install the sphinx-togglebutton Extension
+------------------------------------------------------------
+
+* The sphinx-togglebutton Extension adds the ability to Collapse Sphinx admonitions (notes, warnings, etc) so that their content is hidden until users click a toggle button.
+* From the cmd prompt install the Sphinx Extension: sphinx-togglebutton:
+
+.. code-block::
+    
+    pip install sphinx-togglebutton
+
+* To upgrade include the ``-U`` flag:
+
+.. code-block::
+    
+    pip install -U sphinx-togglebutton
+
+* To use ``sphinx-togglebutton``, make the changes to the conf.py file that are detailed at :ref:`VSCode conf.py`.
+
+----
+
+Install the sphinx_design Extension
+------------------------------------------------------------
+
+* The sphinx_design Extension adds drop downs and tabs:
+
+.. code-block::
+    
+    pip install sphinx_design
+
+* To upgrade include the ``-U`` flag:
+
+.. code-block::
+    
+    pip install -U sphinx_design
+
+* To use ``sphinx_design``, make the changes to the conf.py file that are detailed at :ref:`VSCode conf.py`.
