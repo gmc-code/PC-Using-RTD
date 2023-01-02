@@ -98,8 +98,7 @@ Install python packages via requirements.txt
     sphinx-togglebutton==0.3.2
     sphinx_design==0.3.0
 
-    # for vscode
-    rstcheck
+    # for vscode html preview
     esbonio
     
     
