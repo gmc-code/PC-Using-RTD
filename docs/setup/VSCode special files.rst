@@ -45,8 +45,9 @@ docs/requirements.txt
   
 * Use this text in the requirements file with the version numbers you are using:
 * As of Apr 2023, read the docs uses python 3.7.
-* As of Apr 2023, the latest version numbers that work with read teh docs default python 3.7 are:
-* WHile Sphinx 6.1.3 works with sphinx-rtd-theme 1.2.0, the highest version fo Sphinx that can be used with python 3.7 is 5.3.0.
+* As of Apr 2023, the latest version numbers that work with read the docs default python 3.7 are below.
+* While Sphinx 6.1.3 works with sphinx-rtd-theme 1.2.0, the highest version of Sphinx that can be used with python 3.7 is 5.3.0.
+* While docutils 0.19 works with Sphinx 6.1.3, the highest version of docutils that can be used with Sphinx 5.3.0 is 0.18.1.
 
 .. code-block:: 
 
@@ -57,7 +58,8 @@ docs/requirements.txt
     sphinx-togglebutton  ==0.3.2
     sphinx_design  ==0.4.1
 
-* If the version numbers are left off, read teh docs will fetch the latest version with is compatible with it.
+* If the version numbers are left off, read the docs will fetch the latest version that is compatible with the version of python it is using.
+* There is no need to include explicitly docutils, since it will be taken care of along withe the Sphinx requirement. 
 
 .. code-block::
 
