@@ -6,11 +6,11 @@
 version: 2
 
 # Set the version of Python and other tools you might need
-# "ubuntu-22.04 ubuntu-20.04"
+# As of Apr 2023 python 3.7 is the base and 3.11 is not available
 build:
-  os: ubuntu-20.04
+  os: ubuntu-22.04
   tools:
-    python: '3.11.2'
+    python: '3.11'
     
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
