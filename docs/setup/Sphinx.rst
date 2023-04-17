@@ -33,18 +33,18 @@ Sphinx and the following suggested extensions can be installed individaully or v
 Dependencies
 --------------
 
-As of Jan 1 2023, sphinx-rtd-theme 1.1.1 requires Sphinx<6 and docutils<0.18
-
+| As of Apr 1 2023, sphinx-rtd-theme 1.2.0 requires sphinx<7, docutils 0.18.1, not 0.19
+| For latest updates and dependencies see: https://sphinx-rtd-theme.readthedocs.io/en/stable/changelog.html
 
 
 .. code-block::
     
-    pip install docutils==0.17.1
-    pip install Sphinx==5.3.0
-    pip install sphinx-copybutton==0.5.1
-    pip install sphinx-rtd-theme==1.1.1
+    pip install docutils==0.18.1
+    pip install Sphinx==6.1.3
+    pip install sphinx-copybutton==0.5.2
+    pip install sphinx-rtd-theme==1.2.0
     pip install sphinx-togglebutton==0.3.2
-    pip install sphinx_design==0.3.0
+    pip install sphinx_design==0.4.1
 
 ----
 
