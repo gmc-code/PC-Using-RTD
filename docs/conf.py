@@ -8,6 +8,10 @@ project = 'PC-Using-RTD'
 copyright = '2020-3, GMC'
 author = 'GMC'
 
+
+# ---python
+python_version = ('3.11', '3.12')
+
 # -- General configuration ---------------------------------------------------
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
