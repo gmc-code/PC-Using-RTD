@@ -61,12 +61,15 @@ html_theme = 'sphinx_rtd_theme'
 html_title = "PC-Using-RTD"
 
 # Use custom css  html_css_files = ["custom.css"]
-html_css_files = ['css/custom.css']
+html_css_files = ['css/custom.css', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"]
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
+
+html_static_path = ['_static', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
 
 # If true, add an index to the HTML documents. Default is True.
 html_use_index = False
