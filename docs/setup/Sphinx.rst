@@ -67,14 +67,14 @@ Install Sphinx
 
 .. code-block::
     
-    pip install sphinx==5.3.0
+    pip install sphinx==6.1.3
 
 
 * To upgrade include the ``-U`` flag.
 
 .. code-block::
     
-    pip install -U sphinx==5.3.0
+    pip install -U sphinx==6.1.3
 
 
 * Check the installed version with:

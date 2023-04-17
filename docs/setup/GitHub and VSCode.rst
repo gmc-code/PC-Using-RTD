@@ -6,7 +6,7 @@ GitHub and VSCode
 
 The info below is for the simplest approach where there is only the master branch locally which is being maintained and pushed to the github repository.
 
-FOr github advice see: https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github
+For github advice see: https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github
 
 ----
 
@@ -27,7 +27,7 @@ VSCode starting from **creating a new empty repository**
 * e.g. https://github.com/mygithubname/myrepo
 * Do not create a readme file at this time.
 * Do not select a licence at this time.
-* Addinga read me or selecting a licence will cause an initial commit and will not show the code to use to create the git on your local amchine.
+* Adding a read me or selecting a licence will cause an initial commit and will not show the code to use to create the git on your local amchine.
 * Copy the "create a new repository on the command line" code for use later.
 
 .. code-block::

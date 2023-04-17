@@ -19,7 +19,7 @@ Python -> Sphinx -> VSCode -> reStructuredText -> GitHub -> ReadTheDocs
 
 .. toctree::
     :maxdepth: 3
-    :caption: Table of Contents:
+    :caption: 📚 Table of Contents:
     :numbered:
 
     setup/Introduction.rst
