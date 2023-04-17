@@ -19,7 +19,7 @@ Python -> Sphinx -> VSCode -> reStructuredText -> GitHub -> ReadTheDocs
 
 .. toctree::
     :maxdepth: 3
-    :caption: 📚 Table of Contents:
+    :caption: 📚 📌🙂 Table of Contents:
     :numbered:
 
     setup/Introduction.rst
@@ -40,6 +40,7 @@ Python -> Sphinx -> VSCode -> reStructuredText -> GitHub -> ReadTheDocs
 ----
 
 An alternate approach can be followed in the techwritingmatters tutorial which has 4 youtube videos.
+📚 📌🙂 
 https://techwritingmatters.com/documenting-with-sphinx-tutorial-intro-overview#Structure_of_the_Tutorial
 It starts by cloning a new GitHub repository to the computer. It is Mac based. It uses a text editor instead of VSCode.
 
