@@ -6,10 +6,11 @@
 version: 2
 
 # Set the version of Python and other tools you might need
+# "ubuntu-22.04 ubuntu-20.04"
 build:
   os: ubuntu-22.04
   tools:
-    python: '3.11'
+    python: '3.11.2'
     
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
