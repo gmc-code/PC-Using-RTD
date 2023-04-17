@@ -41,6 +41,14 @@ Documentation as .rst files
         Heading
         =======
 
+    Overlining and underlined a heading also works.
+
+    .. code-block::
+    
+        =======
+        Heading
+        =======
+        
 ----
 
 Images

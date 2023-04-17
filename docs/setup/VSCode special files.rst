@@ -40,9 +40,24 @@ Add files
 docs/requirements.txt
 ------------------------------
 
-* Use a requirements file ``docs/requirements.txt`` to specify the version of Sphinx for read the docs.
+* Use a requirements file ``docs/requirements.txt`` to specify the version of Sphinx and extensions to sphinx for read the docs.
 * See: https://docs.readthedocs.io/en/stable/guides/specifying-dependencies.html
+  
 * Use this text in the requirements file with the version numbers you are using:
+* As of Apr 2023, read the docs uses python 3.7.
+* As of Apr 2023, the latest version numbers that work with read teh docs default python 3.7 are:
+* WHile Sphinx 6.1.3 works with sphinx-rtd-theme 1.2.0, the highest version fo Sphinx that can be used with python 3.7 is 5.3.0.
+
+.. code-block:: 
+
+    docutils ==0.18.1
+    Sphinx ==5.3.0
+    sphinx-copybutton  ==0.5.2
+    sphinx-rtd-theme  ==1.2.0
+    sphinx-togglebutton  ==0.3.2
+    sphinx_design  ==0.4.1
+
+* If the version numbers are left off, read teh docs will fetch the latest version with is compatible with it.
 
 .. code-block::
 
@@ -50,15 +65,14 @@ docs/requirements.txt
     sphinx_rtd_theme
     sphinx-copybutton
 
-    # for interactive jupyter 
-    notebook
-    jupyter-sphinx
-    sphinx-thebe
-
     # useful sphinx extensions
     sphinx-design
     sphinx-togglebutton
 
+    # for interactive jupyter 
+    notebook
+    jupyter-sphinx
+    sphinx-thebe
 
 ----
 
