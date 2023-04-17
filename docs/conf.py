@@ -10,7 +10,7 @@ author = 'GMC'
 
 
 # ---python
-python_version = ('3.11', '3.12')
+build.tools.python = '3.11'
 
 # -- General configuration ---------------------------------------------------
 # Add any Sphinx extension module names here, as strings. They can be
