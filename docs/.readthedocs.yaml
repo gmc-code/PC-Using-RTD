@@ -5,9 +5,6 @@
 # Required
 version: 2
 
-# ---python
-build.tools.python = '3.11'
-
 # Set the version of Python and other tools you might need
 build:
   os: ubuntu-22.04
