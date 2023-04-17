@@ -9,9 +9,6 @@ copyright = '2020-3, GMC'
 author = 'GMC'
 
 
-# ---python
-build.tools.python = '3.11'
-
 # -- General configuration ---------------------------------------------------
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
