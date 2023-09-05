@@ -43,14 +43,10 @@ docs/requirements.txt
 * See: https://docs.readthedocs.io/en/stable/guides/specifying-dependencies.html
   
 * Use this text in the requirements file with the version numbers you are using:
-* As of Apr 2023, read the docs uses python 3.7.
-* As of Apr 2023, the latest version numbers that work with read the docs default python 3.7 are below.
-* While Sphinx 6.1.3 works with sphinx-rtd-theme 1.2.0, the highest version of Sphinx that can be used with python 3.7 is 5.3.0.
-* While docutils 0.19 works with Sphinx 6.1.3, the highest version of docutils that can be used with Sphinx 5.3.0 is 0.18.1.
+* As of Sep 2023, read the docs uses python 3.11.
 
 .. code-block:: 
 
-    docutils==0.18.1
     Sphinx==7.2.5
     sphinx-copybutton==0.5.2
     sphinx-rtd-theme==1.3.0

@@ -39,7 +39,6 @@ Dependencies
 
 .. code-block::
     
-    pip install docutils==0.18.1
     pip install Sphinx==7.2.5
     pip install sphinx-copybutton==0.5.2
     pip install sphinx-rtd-theme==1.3.0
