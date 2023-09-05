@@ -7,21 +7,21 @@ VSCode special files
 Add files
 ------------------------------
 
-#. Add the ``.gitignore`` file using the VSCode terminal. Run from within the **project** folder.
+* Add the ``.gitignore`` file using the VSCode terminal. Run from within the **project** folder.
 
 .. code-block::
 
     type nul > .gitignore
     type nul > .readthedocs.yaml
 
-#. Add the three files using the VSCode terminal. Run from within the **docs** folder.
+* Add the files below using the VSCode terminal. Run from within the **docs** folder.
 
 .. code-block::
 
     type nul > requirements.txt
     type nul > .gitignore
     
-#. Add the ``_templates/breadcrumbs.html`` file using the VSCode terminal. Run from within the **docs** folder.
+* Add the ``_templates/breadcrumbs.html`` file using the VSCode terminal. Run from within the **docs** folder.
 
 .. code-block::
 
