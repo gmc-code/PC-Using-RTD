@@ -88,18 +88,12 @@ Install python packages via requirements.txt
 
 .. code-block::
     
-    # for sphinx-rtd-theme==1.1.1 to work
-    docutils==0.17.1
-    Sphinx==5.3.0
-    sphinx-copybutton==0.5.1
-    sphinx-rtd-theme==1.1.1
-
-    # useful
-    sphinx-togglebutton==0.3.2
-    sphinx_design==0.3.0
-
-    # for vscode html preview
-    esbonio
+    pip install docutils==0.18.1
+    pip install Sphinx==7.2.5
+    pip install sphinx-copybutton==0.5.2
+    pip install sphinx-rtd-theme==1.3.0
+    pip install sphinx-togglebutton==0.3.2
+    pip install sphinx_design==0.5.0
     
     
 
@@ -143,8 +137,11 @@ Updating python packages in a requirements file
     pip show sphinx
     pip show sphinx_rtd_theme
     pip show sphinx-copybutton
+    pip show sphinx-togglebutton
+    pip show sphinx_design
     pip show docutils
 
+    
 * To get all the installed version numbers, check the output from typing in the VSCode terminal:
 
 .. code-block::

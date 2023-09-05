@@ -12,14 +12,13 @@ Add files
 .. code-block::
 
     type nul > .gitignore
-
+    type nul > .readthedocs.yaml
 
 #. Add the three files using the VSCode terminal. Run from within the **docs** folder.
 
 .. code-block::
 
     type nul > requirements.txt
-    type nul > .readthedocs.yaml
     type nul > .gitignore
     
 #. Add the ``_templates/breadcrumbs.html`` file using the VSCode terminal. Run from within the **docs** folder.
@@ -51,12 +50,12 @@ docs/requirements.txt
 
 .. code-block:: 
 
-    docutils ==0.18.1
-    Sphinx ==5.3.0
-    sphinx-copybutton  ==0.5.2
-    sphinx-rtd-theme  ==1.2.0
-    sphinx-togglebutton  ==0.3.2
-    sphinx_design  ==0.4.1
+    docutils==0.18.1
+    Sphinx==7.2.5
+    sphinx-copybutton==0.5.2
+    sphinx-rtd-theme==1.3.0
+    sphinx-togglebutton==0.3.2
+    sphinx_design==0.5.0
 
 * If the version numbers are left off, read the docs will fetch the latest version that is compatible with the version of python it is using.
 * There is no need to include explicitly docutils, since it will be taken care of along withe the Sphinx requirement. 
@@ -81,7 +80,7 @@ docs/requirements.txt
 docs/.readthedocs.yaml
 ------------------------------
 
-* Use a config file ``docs/.readthedocs.yaml`` so that the requirements file can be used.
+* Use a config file ``.readthedocs.yaml`` so that the requirements file can be used.
 * Get the file contents from the main example at: https://docs.readthedocs.io/en/stable/config-file/v2.html
 * This sets some of the advanced settings for read the docs that would otherwise be accessed by Admin:Advance Settings in Read The Docs.
 * e.g the setting to Build PDF or ePub are controlled in the .yaml file.
