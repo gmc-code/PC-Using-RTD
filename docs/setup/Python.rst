@@ -39,12 +39,12 @@ Create a python Virtual environment
     
 | If there are different versions of python installed, use the full path to the version required to create the virtual environment.
 | <username> used in the paths below will be different for each user.
-| e.g. ``C:\Users\username\AppData\Local\Programs\Python\Python311\python.exe``
+| e.g. ``C:\Users\username\AppData\Local\Programs\Python\Python312\python.exe``
 | Create a virtual environment using a specific installed version of python:
 
 .. code-block::
 
-    "C:\Users\username\AppData\Local\Programs\Python\Python311\python.exe" -m venv venv_rtd
+    "C:\Users\username\AppData\Local\Programs\Python\Python312\python.exe" -m venv venv_rtd
 
 | Activate the virtual environment:
 
@@ -102,11 +102,11 @@ Install python packages via requirements.txt
     
     pip install -r "C:\Users\username\venv_rtd\requirements.txt"
 
-| If the terminal prompt is already in the path "C:\Users\username" then use this:
+| If the terminal prompt is already in the path ``"C:\Users\username\"`` then use this:
 
 .. code-block::
 
-    pip install -r "venv_web\requirements.txt"
+    pip install -r "venv_rtd\requirements.txt"
 
 ----
 
