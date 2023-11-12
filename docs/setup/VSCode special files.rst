@@ -47,7 +47,7 @@ docs/requirements.txt
 
 .. code-block:: 
 
-    Sphinx==7.2.5
+    Sphinx==7.2.6
     sphinx-copybutton==0.5.2
     sphinx-rtd-theme==1.3.0
     sphinx-togglebutton==0.3.2
