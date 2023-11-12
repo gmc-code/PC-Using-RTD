@@ -73,7 +73,7 @@ Update pip
 
 .. code-block::
 
-    pip install --upgrade pip
+    python.exe -m pip install --upgrade pip
 
 ----
 
@@ -84,18 +84,27 @@ Install python packages via requirements.txt
 
 | Place a file, called ``requirements.txt``, into the virtual environment folder.
 | Into the file, place the text below, containing the suggested python modules for working with sphinx.
-| There is no need to include the optional modules below unless they are going to be useful.
+| There is no need to include the optional modules below, other than Sphinx, unless they are going to be useful.
 
 .. code-block::
     
-    pip install Sphinx==7.2.5
+    Sphinx==7.2.6
+    sphinx-copybutton==0.5.2
+    sphinx-rtd-theme==1.3.0
+    sphinx-togglebutton==0.3.2
+    sphinx_design==0.5.0
+
+| Alternatively, install each package indiviaually as needed:
+
+.. code-block::
+    
+    pip install Sphinx==7.2.6
     pip install sphinx-copybutton==0.5.2
     pip install sphinx-rtd-theme==1.3.0
     pip install sphinx-togglebutton==0.3.2
     pip install sphinx_design==0.5.0
     
     
-
 | Install requirements using the full path to a requirements.txt file placed in the virtual environment:
 
 .. code-block::
@@ -107,6 +116,12 @@ Install python packages via requirements.txt
 .. code-block::
 
     pip install -r "venv_rtd\requirements.txt"
+
+| If the terminal prompt is already in the path ``"C:\Users\username\venv_rtd\"`` then use this:
+
+.. code-block::
+
+    pip install -r "requirements.txt"
 
 ----
 
@@ -190,4 +205,31 @@ Uninstalling all python packages
 .. code-block::
 
     pip freeze | xargs pip uninstall -y
+
+----
+
+Update virtual environemnt by reinstalling it
+----------------------------------------------------
+
+| To update Python in a virtual environment, you can follow these steps:
+| Make sure you have a `requirements.txt` file that lists all the packages you need.
+
+1. **Deactivate** the virtual environment if it's currently active. You can do this by typing `deactivate` in your terminal and pressing Enter.
+2. **Navigate** ot the directory in the terminal. e.g. `cd C:/Users/username/` 
+3. **Delete** the virtual environment. Be careful with this step as it will remove all the packages installed in the virtual environment. You can do this by typing `Remove-Item -Path venvname -Recurse` in your powershell terminal and pressing Enter. 
+4. **Create** a new virtual environment with the updated Python version. 
+You can do this by typing `python -m venv venvname` in your terminal and pressing Enter. 
+5. **Activate** the new virtual environment. You can do this by typing `C:\Users\username\venvname\Scripts\activate.bat` in your terminal and pressing Enter.
+6. **Install** the required packages. Place a `requirements.txt` file that lists all the packages you need. You can do this by typing `pip install -r requirements.txt` in your terminal and pressing Enter. 
+
+.. code-block::
+
+    deactivate
+    cd C:\Users\USERNAME
+    Remove-Item -Path venv_rtd -Recurse
+    python -m venv venv_rtd
+    C:\Users\USERNAME\venv_rtd\Scripts\activate.bat
+    cd C:\Users\USERNAME\venv_rtd
+    pip install -r requirements.txt
+
 
