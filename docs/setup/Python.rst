@@ -28,7 +28,7 @@ Create a python Virtual environment
 | Virtual environments allow easy maintenance of the libraries needed for the project and avoid issues that can happen when multiple dependencies conflict across multiple projects.
 
 | Create a virtual environment for the packages needed for read the docs.
-| By default, these will be created in the users directory: ``C:\Users\USERNAME\``.
+| By default, these will be created in the users directory: ``C:\Users\USERNAME\``, where ``USERNAME`` is replaced by hte user.
 | In examples below, the virtual environment folder will be called: ``VENVNAME``, but any suitable name can be used.
 
 | Create a virtual environment with the default system python:
