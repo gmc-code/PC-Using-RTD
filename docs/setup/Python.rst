@@ -28,29 +28,29 @@ Create a python Virtual environment
 | Virtual environments allow easy maintenance of the libraries needed for the project and avoid issues that can happen when multiple dependencies conflict across multiple projects.
 
 | Create a virtual environment for the packages needed for read the docs.
-| By default, these will be created in the users directory: ``C:\Users\username\``.
-| In examples below, the virtual environment folder will be called: ``venv_rtd``, but any suitable name can be used.
+| By default, these will be created in the users directory: ``C:\Users\USERNAME\``.
+| In examples below, the virtual environment folder will be called: ``VENVNAME``, but any suitable name can be used.
 
 | Create a virtual environment with the default system python:
 
 .. code-block::
 
-    python -m venv venv_rtd
+    python -m venv VENVNAME
     
 | If there are different versions of python installed, use the full path to the version required to create the virtual environment.
-| <username> used in the paths below will be different for each user.
-| e.g. ``C:\Users\username\AppData\Local\Programs\Python\Python312\python.exe``
+| <USERNAME> used in the paths below will be different for each user.
+| e.g. ``C:\Users\USERNAME\AppData\Local\Programs\Python\Python312\python.exe``
 | Create a virtual environment using a specific installed version of python:
 
 .. code-block::
 
-    "C:\Users\username\AppData\Local\Programs\Python\Python312\python.exe" -m venv venv_rtd
+    "C:\Users\USERNAME\AppData\Local\Programs\Python\Python312\python.exe" -m venv VENVNAME
 
 | Activate the virtual environment:
 
 .. code-block::
     
-    "C:\Users\username\venv_rtd\Scripts\activate.bat"
+    "C:\Users\USERNAME\VENVNAME\Scripts\activate.bat"
 
 ----
 
@@ -62,7 +62,7 @@ Using the python Virtual environment in VSCode
 
     #. Choose **View: Command Palette**. 
     #. Into the drop down search field, type: **Python : Select Interpreter**
-    #. Choose the one listed that refers to the newly created **venv_rtd**.
+    #. Choose the one listed that refers to the newly created **VENVNAME**.
 
 ----
 
@@ -109,15 +109,15 @@ Install python packages via requirements.txt
 
 .. code-block::
     
-    pip install -r "C:\Users\username\venv_rtd\requirements.txt"
+    pip install -r "C:\Users\USERNAME\VENVNAME\requirements.txt"
 
-| If the terminal prompt is already in the path ``"C:\Users\username\"`` then use this:
+| If the terminal prompt is already in the path ``"C:\Users\USERNAME\"`` then use this:
 
 .. code-block::
 
-    pip install -r "venv_rtd\requirements.txt"
+    pip install -r "VENVNAME\requirements.txt"
 
-| If the terminal prompt is already in the path ``"C:\Users\username\venv_rtd\"`` then use this:
+| If the terminal prompt is already in the path ``"C:\Users\USERNAME\VENVNAME\"`` then use this:
 
 .. code-block::
 
@@ -134,7 +134,7 @@ Updating python packages in a requirements file
 
 .. code-block::
     
-    cd venv_rtd
+    cd VENVNAME
     pip install --upgrade -r requirements.txt
 
 * ``-U`` can be used instead of ``--upgrade``
@@ -208,28 +208,38 @@ Uninstalling all python packages
 
 ----
 
-Update virtual environemnt by reinstalling it
+Update virtual Venvironment python in place
+----------------------------------------------------
+
+| To update Python in a virtual environment, you can run this code from a terminal which has the latest version of python installed:
+
+.. code-block::
+
+    python -m venv --upgrade "C:\Users\USERNAME\VENVNAME"
+
+----
+
+Update virtual Venvironment by reinstalling it
 ----------------------------------------------------
 
 | To update Python in a virtual environment, you can follow these steps:
 | Make sure you have a `requirements.txt` file that lists all the packages you need.
 
 1. **Deactivate** the virtual environment if it's currently active. You can do this by typing `deactivate` in your terminal and pressing Enter.
-2. **Navigate** ot the directory in the terminal. e.g. `cd C:/Users/username/` 
-3. **Delete** the virtual environment. Be careful with this step as it will remove all the packages installed in the virtual environment. You can do this by typing `Remove-Item -Path venvname -Recurse` in your powershell terminal and pressing Enter. 
-4. **Create** a new virtual environment with the updated Python version. 
-You can do this by typing `python -m venv venvname` in your terminal and pressing Enter. 
-5. **Activate** the new virtual environment. You can do this by typing `C:\Users\username\venvname\Scripts\activate.bat` in your terminal and pressing Enter.
+2. **Navigate** ot the directory in the terminal. e.g. `cd C:/Users/USERNAME/` 
+3. **Delete** the virtual environment. Be careful with this step as it will remove all the packages installed in the virtual environment. You can do this by typing `Remove-Item -Path VENVNAME -Recurse` in your powershell terminal and pressing Enter. 
+4. **Create** a new virtual environment with the updated Python version. You can do this by typing `python -m venv VENVNAME` in your terminal and pressing Enter. 
+5. **Activate** the new virtual environment. You can do this by typing `C:\Users\USERNAME\VENVNAME\Scripts\activate.bat` in your terminal and pressing Enter.
 6. **Install** the required packages. Place a `requirements.txt` file that lists all the packages you need. You can do this by typing `pip install -r requirements.txt` in your terminal and pressing Enter. 
 
 .. code-block::
 
     deactivate
     cd C:\Users\USERNAME
-    Remove-Item -Path venv_rtd -Recurse
-    python -m venv venv_rtd
-    C:\Users\USERNAME\venv_rtd\Scripts\activate.bat
-    cd C:\Users\USERNAME\venv_rtd
+    Remove-Item -Path VENVNAME -Recurse
+    python -m venv VENVNAME
+    C:\Users\USERNAME\VENVNAME\Scripts\activate.bat
+    cd C:\Users\USERNAME\VENVNAME
     pip install -r requirements.txt
 
 
