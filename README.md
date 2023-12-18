@@ -1,4 +1,4 @@
-"PC-using-RTD" 
+*PC-using-RTD
 
 These docs provide a simple instruction list for setting up automatic updating of ReadTheDocs.
 
