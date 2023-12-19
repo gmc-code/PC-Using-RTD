@@ -110,6 +110,18 @@ docs/.gitignore
 
 ----
 
+Fixing .gitignore that isn't working
+---------------------------------------
+
+There could be several reasons why your `.gitignore` file is not working as expected such as **Files already tracked by Git**: `.gitignore` only ignores untracked files. If the files are already being tracked by Git, you need to remove them from the repository and add them back, this time respecting the rules in your `.gitignore`. You can do this with the following commands:
+
+.. code-block::
+
+    git rm -rf --cached .
+    git add .
+
+----
+
 breadcrumbs.html
 ------------------------------
 
